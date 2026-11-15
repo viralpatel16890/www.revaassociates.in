@@ -10,9 +10,9 @@ import { FormsModule } from '@angular/forms';
     <!-- PAGE HERO -->
     <div class="page-hero">
       <div class="container">
-        <span class="badge-tag">Connect With Us</span>
-        <h1>Get in Touch with Our Legal Team</h1>
-        <p>Schedule a confidential consultation or reach out to our practice chairs.</p>
+        <span class="badge-tag">Get in Touch</span>
+        <h1>Contact Reva Associates</h1>
+        <p>Book a free consultation or connect directly with Pooja Patel for personalized financial &amp; taxation advice.</p>
       </div>
     </div>
 
@@ -21,68 +21,79 @@ import { FormsModule } from '@angular/forms';
         <!-- CONTACT INFO COLUMN -->
         <div class="info-column">
           <span class="badge-tag">Reach Us Directly</span>
-          <h2>We Are Here to Assist Your Business</h2>
+          <h2>Your Trusted Financial Partner in Mumbai</h2>
           <p>
-            Whether you require an immediate legal assessment, ongoing retainer representation, or assistance with transactional structuring, our partners are ready to respond promptly.
+            Simplifying Accounting, Taxation, Loans &amp; Investments for Individuals and Businesses across India.
           </p>
 
           <div class="info-cards">
             <div class="info-card">
               <div class="icon-circle"><i class="fa-solid fa-location-dot"></i></div>
               <div>
-                <h4>Principal Office</h4>
-                <p>402, Prestige Tower, Bandra Kurla Complex (BKC), Mumbai, Maharashtra 400051, India</p>
+                <h4>Office Address</h4>
+                <p><strong>Reva Associates</strong></p>
+                <p>15/Patrakar Sadan, Near Rationing Office, Rajendra Nagar, Borivali East, Mumbai - 400066</p>
+              </div>
+            </div>
+
+            <div class="info-card">
+              <div class="icon-circle"><i class="fa-solid fa-user-tie"></i></div>
+              <div>
+                <h4>Contact Person</h4>
+                <p><strong>Pooja Patel</strong> (Founder &amp; Financial Consultant)</p>
               </div>
             </div>
 
             <div class="info-card">
               <div class="icon-circle"><i class="fa-solid fa-phone"></i></div>
               <div>
-                <h4>Direct Phone Lines</h4>
-                <p>+91 (022) 2890-1234 (Office Board)</p>
-                <p>+91 98765 43210 (Direct Counsel Cell)</p>
+                <h4>Phone / WhatsApp</h4>
+                <p><a href="tel:8879146502" class="contact-link"><strong>8879 146 502</strong></a></p>
+                <p><a href="https://wa.me/918879146502" target="_blank" class="contact-link whatsapp-link"><i class="fa-brands fa-whatsapp"></i> Chat on WhatsApp</a></p>
               </div>
             </div>
 
             <div class="info-card">
               <div class="icon-circle"><i class="fa-solid fa-envelope"></i></div>
               <div>
-                <h4>Email Inquiries</h4>
-                <p>General: contact&#64;revaassociates.in</p>
-                <p>Consultations: counsel&#64;revaassociates.in</p>
+                <h4>Email Address</h4>
+                <p><a href="mailto:revaassociates22@gmail.com" class="contact-link">revaassociates22&#64;gmail.com</a></p>
               </div>
             </div>
 
             <div class="info-card">
               <div class="icon-circle"><i class="fa-solid fa-clock"></i></div>
               <div>
-                <h4>Working Hours</h4>
-                <p>Monday - Friday: 9:00 AM - 7:00 PM</p>
-                <p>Saturday: 10:00 AM - 4:00 PM (By Prior Appointment)</p>
+                <h4>Office Timings</h4>
+                <p>Mon - Sat, 10:00 AM - 7:00 PM</p>
+                <p class="text-muted-small">Sunday: Closed</p>
               </div>
             </div>
           </div>
 
-          <div class="confidentiality-notice">
-            <i class="fa-solid fa-lock"></i>
-            <div>
-              <strong>Confidentiality Assurance</strong>
-              <p>All information transmitted via this contact portal is protected by attorney-client privilege and strict non-disclosure obligations.</p>
-            </div>
+          <div class="direct-actions">
+            <a href="https://wa.me/918879146502" target="_blank" class="btn btn-whatsapp">
+              <i class="fa-brands fa-whatsapp"></i>
+              <span>WhatsApp Us</span>
+            </a>
+            <a href="https://maps.google.com/?q=15+Patrakar+Sadan+Rajendra+Nagar+Borivali+East+Mumbai+400066" target="_blank" class="btn btn-maps">
+              <i class="fa-solid fa-map-location-dot"></i>
+              <span>Get Directions on Google Maps</span>
+            </a>
           </div>
         </div>
 
         <!-- FORM COLUMN -->
         <div class="form-column">
           <div class="form-wrapper">
-            <h3>Schedule a Consultation</h3>
-            <p class="form-sub">Fill out the details below and an associate partner will connect within 4 business hours.</p>
+            <h3>Book Free Consultation</h3>
+            <p class="form-sub">Leave your details below and Pooja Patel will connect with you shortly.</p>
 
             <div *ngIf="submitted()" class="alert-success">
               <i class="fa-solid fa-circle-check"></i>
               <div>
                 <strong>Thank you, {{ formData.fullName }}!</strong>
-                <p>Your inquiry regarding <em>"{{ formData.practiceArea }}"</em> has been received. Our team will review the brief and contact you at {{ formData.email }} or {{ formData.phone }}.</p>
+                <p>Your request regarding <em>"{{ formData.serviceInterest }}"</em> has been received. We will contact you at {{ formData.phone }} or {{ formData.email }} during business hours.</p>
               </div>
               <button class="btn btn-outline reset-btn" (click)="resetForm()">Send Another Inquiry</button>
             </div>
@@ -97,81 +108,75 @@ import { FormsModule } from '@angular/forms';
                     name="fullName" 
                     [(ngModel)]="formData.fullName" 
                     required 
-                    placeholder="Adv. / Mr. / Ms. John Doe" />
+                    placeholder="e.g. Ramesh Shah" />
                 </div>
                 <div class="form-group">
-                  <label for="companyName">Company / Organization</label>
-                  <input 
-                    type="text" 
-                    id="companyName" 
-                    name="companyName" 
-                    [(ngModel)]="formData.companyName" 
-                    placeholder="Acme Corp Pvt. Ltd." />
-                </div>
-              </div>
-
-              <div class="form-row">
-                <div class="form-group">
-                  <label for="email">Corporate Email *</label>
-                  <input 
-                    type="email" 
-                    id="email" 
-                    name="email" 
-                    [(ngModel)]="formData.email" 
-                    required 
-                    placeholder="john@example.com" />
-                </div>
-                <div class="form-group">
-                  <label for="phone">Contact Number *</label>
+                  <label for="phone">Mobile / WhatsApp Number *</label>
                   <input 
                     type="tel" 
                     id="phone" 
                     name="phone" 
                     [(ngModel)]="formData.phone" 
                     required 
-                    placeholder="+91 98765 43210" />
+                    placeholder="e.g. 98765 43210" />
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="email">Email Address *</label>
+                  <input 
+                    type="email" 
+                    id="email" 
+                    name="email" 
+                    [(ngModel)]="formData.email" 
+                    required 
+                    placeholder="e.g. name@example.com" />
+                </div>
+                <div class="form-group">
+                  <label for="clientType">I Am A *</label>
+                  <select 
+                    id="clientType" 
+                    name="clientType" 
+                    [(ngModel)]="formData.clientType" 
+                    required>
+                    <option value="" disabled selected>Select category</option>
+                    <option value="Salaried Professional / NRI">Salaried Professional / NRI</option>
+                    <option value="Trader / Shopkeeper / Retailer">Trader / Shopkeeper / Retailer</option>
+                    <option value="Startup / MSME / Pvt Ltd">Startup / MSME / Pvt Ltd</option>
+                    <option value="Doctor / CA / Lawyer / Freelancer">Doctor / CA / Lawyer / Freelancer</option>
+                    <option value="Other">Other</option>
+                  </select>
                 </div>
               </div>
 
               <div class="form-group">
-                <label for="practiceArea">Practice Area of Interest *</label>
+                <label for="serviceInterest">Service Required *</label>
                 <select 
-                  id="practiceArea" 
-                  name="practiceArea" 
-                  [(ngModel)]="formData.practiceArea" 
+                  id="serviceInterest" 
+                  name="serviceInterest" 
+                  [(ngModel)]="formData.serviceInterest" 
                   required>
-                  <option value="" disabled selected>Select a relevant practice area</option>
-                  <option value="Corporate & M&A">Corporate &amp; M&amp;A Advisory</option>
-                  <option value="Commercial Dispute & Litigation">Commercial Dispute &amp; Litigation</option>
-                  <option value="Direct / Indirect Taxation">Direct / Indirect Taxation &amp; GST</option>
-                  <option value="Insolvency & Bankruptcy (NCLT)">Insolvency &amp; Bankruptcy (NCLT)</option>
-                  <option value="Intellectual Property Rights">Intellectual Property &amp; Trademarks</option>
-                  <option value="Real Estate & RERA">Real Estate &amp; RERA Advisory</option>
-                  <option value="Other Commercial Matter">Other Commercial / Regulatory Matter</option>
+                  <option value="" disabled selected>Select service</option>
+                  <option value="Accounting Services">Accounting &amp; Bookkeeping</option>
+                  <option value="Tax Filing Services">Tax Filing (ITR, GST, TDS, Notice Handling)</option>
+                  <option value="Loan Services">Loan Advisory (Home, Business, MSME, LAP, CC/OD)</option>
+                  <option value="Insurance Services">Insurance (Life, Health, Motor, Business)</option>
+                  <option value="Investment Services">Investment Planning (Mutual Funds, SIP, PPF, NPS)</option>
+                  <option value="Portfolio Management">Portfolio Management (HNI Wealth)</option>
+                  <option value="Other Financial Inquiry">General Financial Consultation</option>
                 </select>
               </div>
 
               <div class="form-group">
-                <label for="message">Summary of the Matter *</label>
+                <label for="message">Your Query / Message *</label>
                 <textarea 
                   id="message" 
                   name="message" 
-                  rows="5" 
+                  rows="4" 
                   [(ngModel)]="formData.message" 
                   required 
-                  placeholder="Please provide a brief background of the situation or advisory required..."></textarea>
-              </div>
-
-              <div class="form-check">
-                <input 
-                  type="checkbox" 
-                  id="agreement" 
-                  name="agreement" 
-                  [(ngModel)]="formData.agreement" 
-                  required />
-                <label for="agreement">
-                  I agree that this submission does not automatically establish an advocate-client relationship until mutually agreed upon in writing.
-                </label>
+                  placeholder="Tell us briefly about your accounting, taxation, or financial query..."></textarea>
               </div>
 
               <button 
@@ -179,7 +184,7 @@ import { FormsModule } from '@angular/forms';
                 class="btn btn-primary submit-btn" 
                 [disabled]="!contactForm.form.valid">
                 <i class="fa-solid fa-paper-plane"></i>
-                <span>Submit Confidential Inquiry</span>
+                <span>Submit Free Consultation Request</span>
               </button>
             </form>
           </div>
@@ -187,13 +192,24 @@ import { FormsModule } from '@angular/forms';
       </div>
     </section>
 
-    <!-- MAP PLACEHOLDER -->
+    <!-- GOOGLE MAPS SECTION -->
     <section class="map-section">
       <div class="container">
-        <div class="map-placeholder">
-          <i class="fa-solid fa-map-location-dot"></i>
-          <h3>Located at the Heart of Mumbai's Financial District</h3>
-          <p>Bandra Kurla Complex (BKC) • 10 minutes from Western Express Highway • Valet parking available on-site.</p>
+        <div class="map-card">
+          <div class="map-info">
+            <i class="fa-solid fa-map-pin"></i>
+            <div>
+              <h3>Visit Us in Borivali East</h3>
+              <p>15/Patrakar Sadan, Near Rationing Office, Rajendra Nagar, Borivali East, Mumbai - 400066</p>
+              <p class="timing-badge"><i class="fa-solid fa-clock"></i> Mon-Sat, 10 AM - 7 PM</p>
+            </div>
+          </div>
+          <div class="map-actions">
+            <a href="https://maps.google.com/?q=15+Patrakar+Sadan+Rajendra+Nagar+Borivali+East+Mumbai+400066" target="_blank" class="btn btn-outline">
+              <i class="fa-solid fa-location-arrow"></i>
+              <span>Get Directions</span>
+            </a>
+          </div>
         </div>
       </div>
     </section>
@@ -235,13 +251,15 @@ import { FormsModule } from '@angular/forms';
 
     .info-column {
       h2 {
-        font-size: 2.2rem;
+        font-size: 2.1rem;
         margin: 0.8rem 0 1rem 0;
+        color: var(--dark);
       }
 
       p {
         margin-bottom: 2rem;
         font-size: 1.02rem;
+        color: var(--text-dark);
       }
 
       .info-cards {
@@ -269,45 +287,77 @@ import { FormsModule } from '@angular/forms';
           }
 
           h4 {
-            font-size: 1.05rem;
+            font-size: 1rem;
             margin-bottom: 0.25rem;
+            color: var(--dark);
           }
 
           p {
             font-size: 0.92rem;
             margin: 0;
             line-height: 1.5;
+            color: var(--text-muted);
+          }
+
+          .contact-link {
+            color: var(--primary);
+            font-weight: 600;
+
+            &:hover {
+              color: var(--secondary);
+            }
+          }
+
+          .whatsapp-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            color: #16a34a;
+            margin-top: 0.25rem;
+          }
+
+          .text-muted-small {
+            font-size: 0.82rem;
+            color: #94a3b8;
           }
         }
       }
 
-      .confidentiality-notice {
+      .direct-actions {
         display: flex;
-        align-items: flex-start;
-        gap: 1rem;
-        padding: 1.25rem;
-        background: var(--bg-light);
-        border-radius: var(--radius-sm);
-        border-left: 3px solid var(--secondary);
+        flex-direction: column;
+        gap: 0.85rem;
 
-        i {
-          color: var(--secondary);
-          font-size: 1.3rem;
-          margin-top: 0.2rem;
+        .btn-whatsapp {
+          background-color: #25d366;
+          color: #ffffff;
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          gap: 0.6rem;
+          padding: 0.85rem 1.5rem;
+          border-radius: var(--radius-sm);
+          font-weight: 700;
+
+          &:hover {
+            background-color: #20ba5a;
+          }
         }
 
-        strong {
-          display: block;
-          color: var(--primary);
-          font-size: 0.92rem;
-          margin-bottom: 0.25rem;
-        }
+        .btn-maps {
+          background-color: var(--primary);
+          color: #ffffff;
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          gap: 0.6rem;
+          padding: 0.85rem 1.5rem;
+          border-radius: var(--radius-sm);
+          font-weight: 600;
 
-        p {
-          font-size: 0.85rem;
-          color: var(--text-muted);
-          margin: 0;
-          line-height: 1.45;
+          &:hover {
+            background-color: var(--dark);
+          }
         }
       }
     }
@@ -322,11 +372,13 @@ import { FormsModule } from '@angular/forms';
       h3 {
         font-size: 1.8rem;
         margin-bottom: 0.5rem;
+        color: var(--dark);
       }
 
       .form-sub {
         font-size: 0.92rem;
         margin-bottom: 2rem;
+        color: var(--text-muted);
       }
 
       .form-row {
@@ -367,25 +419,6 @@ import { FormsModule } from '@angular/forms';
             border-color: var(--secondary);
             box-shadow: 0 0 0 3px rgba(197, 160, 89, 0.15);
           }
-        }
-      }
-
-      .form-check {
-        display: flex;
-        align-items: flex-start;
-        gap: 0.75rem;
-        margin-bottom: 1.75rem;
-
-        input[type="checkbox"] {
-          margin-top: 0.3rem;
-          cursor: pointer;
-        }
-
-        label {
-          font-size: 0.82rem;
-          color: var(--text-muted);
-          line-height: 1.4;
-          cursor: pointer;
         }
       }
 
@@ -435,27 +468,54 @@ import { FormsModule } from '@angular/forms';
     .map-section {
       padding-bottom: 5rem;
 
-      .map-placeholder {
+      .map-card {
         background: var(--bg-light);
-        border: 2px dashed var(--border-color);
+        border: 1px solid var(--border-color);
         border-radius: var(--radius-md);
-        padding: 3.5rem 1.5rem;
-        text-align: center;
+        padding: 2.5rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 2rem;
+        flex-wrap: wrap;
 
-        i {
-          font-size: 3rem;
-          color: var(--secondary);
-          margin-bottom: 1rem;
-        }
+        .map-info {
+          display: flex;
+          align-items: flex-start;
+          gap: 1.5rem;
 
-        h3 {
-          font-size: 1.5rem;
-          margin-bottom: 0.5rem;
-        }
+          i {
+            font-size: 2.5rem;
+            color: var(--secondary);
+            margin-top: 0.2rem;
+          }
 
-        p {
-          font-size: 0.95rem;
-          margin: 0;
+          h3 {
+            font-size: 1.35rem;
+            margin-bottom: 0.35rem;
+            color: var(--dark);
+          }
+
+          p {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            margin: 0;
+          }
+
+          .timing-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            margin-top: 0.5rem;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--primary);
+
+            i {
+              font-size: 0.9rem;
+              color: var(--secondary);
+            }
+          }
         }
       }
     }
@@ -464,12 +524,11 @@ import { FormsModule } from '@angular/forms';
 export class ContactComponent {
   formData = {
     fullName: '',
-    companyName: '',
-    email: '',
     phone: '',
-    practiceArea: '',
-    message: '',
-    agreement: false
+    email: '',
+    clientType: '',
+    serviceInterest: '',
+    message: ''
   };
 
   submitted = signal(false);
@@ -481,12 +540,11 @@ export class ContactComponent {
   resetForm() {
     this.formData = {
       fullName: '',
-      companyName: '',
-      email: '',
       phone: '',
-      practiceArea: '',
-      message: '',
-      agreement: false
+      email: '',
+      clientType: '',
+      serviceInterest: '',
+      message: ''
     };
     this.submitted.set(false);
   }

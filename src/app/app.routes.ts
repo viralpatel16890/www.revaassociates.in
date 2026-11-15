@@ -6,10 +6,10 @@ import { TestimonialsComponent } from './pages/testimonials/testimonials.compone
 import { ContactComponent } from './pages/contact/contact.component';
 
 export const routes: Routes = [
-  { path: '', component: HomeComponent, title: 'Home | Reva & Associates' },
-  { path: 'about', component: AboutComponent, title: 'About Us | Reva & Associates' },
-  { path: 'services', component: ServicesComponent, title: 'Practice Areas & Services | Reva & Associates' },
-  { path: 'testimonials', component: TestimonialsComponent, title: 'Client Testimonials | Reva & Associates' },
-  { path: 'contact', component: ContactComponent, title: 'Contact Us | Reva & Associates' },
+  { path: '', component: HomeComponent, title: 'Home | Reva Associates' },
+  { path: 'about', component: AboutComponent, title: 'About Us | Reva Associates' },
+  { path: 'services', component: ServicesComponent, title: 'Services | Reva Associates' },
+  { path: 'testimonials', component: TestimonialsComponent, title: 'Client Feedback | Reva Associates' },
+  { path: 'contact', component: ContactComponent, title: 'Contact Us | Reva Associates' },
   { path: '**', redirectTo: '' }
 ];

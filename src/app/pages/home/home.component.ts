@@ -12,139 +12,118 @@ import { CommonModule } from '@angular/common';
       <div class="hero-overlay"></div>
       <div class="container hero-container">
         <div class="hero-content">
-          <span class="hero-badge"><i class="fa-solid fa-award"></i> Trusted Legal &amp; Corporate Advisors</span>
+          <span class="hero-badge"><i class="fa-solid fa-chart-line"></i> Accounting | Tax Filing | Loans | Insurance | Investments | Portfolio Management</span>
           <h1 class="hero-title">
-            Strategic Counsel. <br/>
-            <span>Uncompromising Integrity.</span>
+            Reva Associates - <br/>
+            <span>Your Trusted Financial Partner in Mumbai</span>
           </h1>
           <p class="hero-description">
-            Reva &amp; Associates provides premier advisory, litigation, and regulatory compliance services tailored to businesses, startups, and private clients across India and globally.
+            Simplifying Accounting, Taxation, Loans &amp; Investments for Individuals and Businesses across India.
           </p>
           <div class="hero-actions">
             <a routerLink="/contact" class="btn btn-primary">
-              <span>Book a Consultation</span>
+              <span>Book Free Consultation</span>
               <i class="fa-solid fa-arrow-right"></i>
             </a>
-            <a routerLink="/services" class="btn btn-outline-white">
-              <i class="fa-solid fa-briefcase"></i>
-              <span>Explore Practice Areas</span>
+            <a href="tel:8879146502" class="btn btn-outline-white">
+              <i class="fa-solid fa-phone"></i>
+              <span>Call Now</span>
             </a>
           </div>
 
           <div class="hero-metrics">
             <div class="metric-item">
-              <h3>20+</h3>
-              <p>Years Experience</p>
-            </div>
-            <div class="metric-divider"></div>
-            <div class="metric-item">
-              <h3>1,500+</h3>
-              <p>Clients Advised</p>
-            </div>
-            <div class="metric-divider"></div>
-            <div class="metric-item">
-              <h3>98%</h3>
-              <p>Success Rate</p>
-            </div>
-            <div class="metric-divider"></div>
-            <div class="metric-item">
               <h3>50+</h3>
-              <p>Legal Experts</p>
+              <p>Happy Clients</p>
+            </div>
+            <div class="metric-divider"></div>
+            <div class="metric-item">
+              <h3>30+</h3>
+              <p>Banks &amp; NBFC Partners</p>
+            </div>
+            <div class="metric-divider"></div>
+            <div class="metric-item">
+              <h3>100%</h3>
+              <p>Compliance &amp; Timely Filings</p>
+            </div>
+            <div class="metric-divider"></div>
+            <div class="metric-item">
+              <h3>1-Stop</h3>
+              <p>Financial Solution</p>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- HIGHLIGHT STATS BAR -->
-    <section class="banner-strip">
-      <div class="container strip-grid">
-        <div class="strip-item">
-          <i class="fa-solid fa-shield-halved"></i>
-          <div>
-            <h4>Corporate Governance</h4>
-            <p>Rigorous regulatory adherence &amp; board advisory</p>
-          </div>
-        </div>
-        <div class="strip-item">
-          <i class="fa-solid fa-handshake"></i>
-          <div>
-            <h4>Commercial Deals &amp; M&amp;A</h4>
-            <p>Seamless transaction structuring &amp; due diligence</p>
-          </div>
-        </div>
-        <div class="strip-item">
-          <i class="fa-solid fa-gavel"></i>
-          <div>
-            <h4>Litigation Defense</h4>
-            <p>High-stakes dispute resolution &amp; arbitration</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ABOUT PREVIEW SECTION -->
+    <!-- INTRO & WHY CHOOSE US -->
     <section class="section about-preview">
       <div class="container about-grid">
         <div class="about-image-col">
           <div class="image-wrapper">
-            <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=800&q=80" alt="Office building" class="main-img" />
+            <img src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&w=800&q=80" alt="Accounting & Financial Planning" class="main-img" />
             <div class="exp-badge">
-              <span class="exp-number">20+</span>
-              <span class="exp-text">Years of Excellence in Legal Advocacy</span>
+              <span class="exp-number">50+</span>
+              <span class="exp-text">Happy Clients Across Mumbai</span>
             </div>
           </div>
         </div>
 
         <div class="about-text-col">
-          <span class="badge-tag">Who We Are</span>
-          <h2>A Heritage of Trust, A Vision for Tomorrow</h2>
+          <span class="badge-tag">About Reva Associates</span>
+          <h2>We Handle the Numbers, So You Can Focus on Growth</h2>
           <p class="lead-text">
-            At Reva &amp; Associates, we combine traditional professional rigor with modern, tech-forward business acumen to navigate complex legal, tax, and regulatory landscapes.
+            At Reva Associates, we help individuals, startups, and SMEs stay compliant, save taxes, and grow wealth.
           </p>
           <p>
-            Our multidisciplinary team of seasoned advocates, chartered accountants, and company secretaries delivers actionable strategies designed to safeguard our clients' assets, drive growth, and mitigate risks.
+            Based in Borivali East, Mumbai, we combine deep knowledge of Indian taxation laws with practical financial advice. From GST and Income Tax filing to loan advisory and investment planning — we handle the numbers, so you can focus on growth.
           </p>
 
           <div class="features-list">
             <div class="feature-item">
               <i class="fa-solid fa-circle-check"></i>
               <div>
-                <strong>Client-Centric Solutions:</strong> Every strategy is bespoke to your business model.
+                <strong>Local Expertise with 50+ Happy Clients:</strong> In-depth knowledge of Indian accounting standards, Income Tax Act, and GST laws, trusted by 50+ clients across Mumbai.
               </div>
             </div>
             <div class="feature-item">
               <i class="fa-solid fa-circle-check"></i>
               <div>
-                <strong>Transparent Fee Models:</strong> Predictable retainers and milestone-based engagements.
+                <strong>One-Stop Solution:</strong> From bookkeeping to portfolio management — all financial services under one roof.
               </div>
             </div>
             <div class="feature-item">
               <i class="fa-solid fa-circle-check"></i>
               <div>
-                <strong>Global Capability:</strong> Cross-border legal structuring and foreign direct investment expertise.
+                <strong>Transparent &amp; Timely:</strong> No hidden charges. We ensure 100% compliance and on-time filings.
+              </div>
+            </div>
+            <div class="feature-item">
+              <i class="fa-solid fa-circle-check"></i>
+              <div>
+                <strong>Personalized for You:</strong> Custom plans for salaried individuals, traders, professionals, and SMEs.
               </div>
             </div>
           </div>
 
           <div class="cta-row">
-            <a routerLink="/about" class="btn btn-primary">Learn More About Us</a>
+            <a routerLink="/about" class="btn btn-primary">More About Us</a>
             <div class="founder-info">
-              <i class="fa-solid fa-quote-left quote-icon"></i>
-              <span>"Justice and precision in every brief."</span>
+              <i class="fa-solid fa-handshake quote-icon"></i>
+              <span><strong>Our Promise:</strong> Compliance, Clarity, Growth.</span>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- CORE SERVICES -->
+    <!-- OUR SERVICES OVERVIEW -->
     <section class="section services-section bg-light">
       <div class="container">
         <div class="section-header">
-          <span class="badge-tag">Practice Areas</span>
-          <h2>Comprehensive Corporate &amp; Legal Services</h2>
-          <p>Full-spectrum legal and financial advisory tailored to corporations, founders, and high-net-worth individuals.</p>
+          <span class="badge-tag">Our Services</span>
+          <h2>Comprehensive Financial &amp; Taxation Solutions</h2>
+          <p>End-to-end accounting, tax compliance, loan syndication, insurance, and wealth advisory tailored to your unique goals.</p>
         </div>
 
         <div class="services-grid">
@@ -156,7 +135,7 @@ import { CommonModule } from '@angular/common';
               <li *ngFor="let item of s.bullets"><i class="fa-solid fa-check"></i> {{ item }}</li>
             </ul>
             <a routerLink="/services" class="card-link">
-              <span>Read More</span>
+              <span>Explore Details</span>
               <i class="fa-solid fa-arrow-right"></i>
             </a>
           </div>
@@ -164,42 +143,108 @@ import { CommonModule } from '@angular/common';
 
         <div class="view-all-wrapper">
           <a routerLink="/services" class="btn btn-primary">
-            <span>View All Practice Areas</span>
-            <i class="fa-solid fa-grid-2"></i>
+            <span>View All Services</span>
+            <i class="fa-solid fa-arrow-right"></i>
           </a>
         </div>
       </div>
     </section>
 
-    <!-- TESTIMONIALS SLIDER / PREVIEW -->
-    <section class="section testimonials-section">
+    <!-- WHO WE SERVE -->
+    <section class="section who-we-serve-section">
       <div class="container">
         <div class="section-header">
-          <span class="badge-tag">Client Voices</span>
-          <h2>What Our Clients Say About Us</h2>
-          <p>Read genuine feedback from organizations and private individuals we have had the honor to advise.</p>
+          <span class="badge-tag">Who We Serve</span>
+          <h2>Tailored Solutions for Every Client</h2>
+          <p>We serve a diverse range of clients across Mumbai and India with personalized financial support.</p>
         </div>
 
-        <div class="testimonials-grid">
-          <div class="testimonial-card" *ngFor="let t of topTestimonials">
-            <div class="stars">
-              <i class="fa-solid fa-star" *ngFor="let i of [1,2,3,4,5]"></i>
+        <div class="serve-grid">
+          <div class="serve-card">
+            <div class="serve-icon"><i class="fa-solid fa-user-tie"></i></div>
+            <h4>Salaried Professionals &amp; NRI Clients</h4>
+            <p>Optimal tax filing, Old vs New regime optimization, Capital gains calculation, and foreign remittance advisory.</p>
+          </div>
+          <div class="serve-card">
+            <div class="serve-icon"><i class="fa-solid fa-shop"></i></div>
+            <h4>Traders, Shopkeepers &amp; Retailers in Mumbai</h4>
+            <p>Hassle-free monthly GST filings, input tax credit reconciliation, inventory bookkeeping, and working capital loans.</p>
+          </div>
+          <div class="serve-card">
+            <div class="serve-icon"><i class="fa-solid fa-building"></i></div>
+            <h4>Startups, MSMEs, Partnership Firms, Pvt Ltd Companies</h4>
+            <p>End-to-end statutory compliance, Indian GAAP bookkeeping, TDS/TCS, advance tax, and balance sheet preparation.</p>
+          </div>
+          <div class="serve-card">
+            <div class="serve-icon"><i class="fa-solid fa-user-doctor"></i></div>
+            <h4>Doctors, CAs, Lawyers &amp; Freelancers</h4>
+            <p>Presumptive taxation (Section 44ADA), professional expense optimization, investment planning, and wealth management.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- COMPLIANCE CALENDAR & FAQ -->
+    <section class="section calendar-faq-section bg-light">
+      <div class="container">
+        <div class="two-col-grid">
+          <!-- COMPLIANCE CALENDAR -->
+          <div class="col-calendar">
+            <span class="badge-tag">Compliance Calendar</span>
+            <h2>Key Tax Deadlines</h2>
+            <p>Stay ahead of statutory due dates and avoid late fees and interest penalties.</p>
+
+            <div class="calendar-table-wrap">
+              <table class="compliance-table">
+                <thead>
+                  <tr>
+                    <th>Deadline</th>
+                    <th>Compliance Requirement</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="date-badge">July 31</span></td>
+                    <td><strong>ITR Filing for Individuals</strong> (Salaried, Non-audit cases)</td>
+                  </tr>
+                  <tr>
+                    <td><span class="date-badge">Oct 31</span></td>
+                    <td><strong>Tax Audit Cases</strong> (Businesses &amp; eligible professionals)</td>
+                  </tr>
+                  <tr>
+                    <td><span class="date-badge">Monthly</span></td>
+                    <td><strong>GSTR-1 &amp; 3B</strong> (GST Returns &amp; Tax Payments)</td>
+                  </tr>
+                  <tr>
+                    <td><span class="date-badge">Quarterly</span></td>
+                    <td><strong>TDS Returns</strong> (24Q, 26Q, 27Q &amp; Form 16/16A generation)</td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
-            <p class="quote">"{{ t.quote }}"</p>
-            <div class="client-meta">
-              <div class="client-avatar">
-                <i class="fa-solid fa-user-tie"></i>
+          </div>
+
+          <!-- FAQ SECTION -->
+          <div class="col-faq">
+            <span class="badge-tag">Common Questions</span>
+            <h2>Frequently Asked Questions</h2>
+            <p>Quick answers to common queries regarding Indian taxation and regulatory compliance.</p>
+
+            <div class="faq-list">
+              <div class="faq-card">
+                <h4><i class="fa-solid fa-circle-question"></i> What is the difference between old and new tax regime?</h4>
+                <p>We explain and calculate which regime saves you more tax based on your deductions (80C, 80D, HRA) and income brackets.</p>
               </div>
-              <div class="client-details">
-                <h4>{{ t.name }}</h4>
-                <span>{{ t.role }}, {{ t.company }}</span>
+              <div class="faq-card">
+                <h4><i class="fa-solid fa-circle-question"></i> Do I need GST registration if turnover is below 40 lakhs?</h4>
+                <p>Depends on service vs goods and interstate supply. We advise for free to ensure you stay fully compliant.</p>
+              </div>
+              <div class="faq-card">
+                <h4><i class="fa-solid fa-circle-question"></i> Can you handle GST notices?</h4>
+                <p>Yes, complete representation, scrutiny analysis, and reply drafting as per GST law guidelines.</p>
               </div>
             </div>
           </div>
-        </div>
-
-        <div class="view-all-wrapper">
-          <a routerLink="/testimonials" class="btn btn-outline">Read All Client Stories</a>
         </div>
       </div>
     </section>
@@ -208,14 +253,14 @@ import { CommonModule } from '@angular/common';
     <section class="cta-banner">
       <div class="container cta-container">
         <div class="cta-text">
-          <h2>Ready to Discuss Your Case or Transaction?</h2>
-          <p>Schedule a confidential consultation with our principal advisors today.</p>
+          <h2>Ready to Simplify Your Taxes &amp; Finances?</h2>
+          <p>Book a free consultation with Pooja Patel at Reva Associates today.</p>
         </div>
         <div class="cta-actions">
-          <a routerLink="/contact" class="btn btn-white">Get in Touch Today</a>
-          <a href="tel:+919876543210" class="call-link">
+          <a routerLink="/contact" class="btn btn-white">Book Free Consultation</a>
+          <a href="tel:8879146502" class="call-link">
             <i class="fa-solid fa-phone-volume"></i>
-            <span>+91 98765 43210</span>
+            <span>8879 146 502</span>
           </a>
         </div>
       </div>
@@ -248,7 +293,7 @@ import { CommonModule } from '@angular/common';
     }
 
     .hero-content {
-      max-width: 820px;
+      max-width: 860px;
     }
 
     .hero-badge {
@@ -264,32 +309,32 @@ import { CommonModule } from '@angular/common';
       font-weight: 600;
       letter-spacing: 0.5px;
       margin-bottom: 1.5rem;
+      flex-wrap: wrap;
     }
 
     .hero-title {
-      font-size: 3.5rem;
+      font-size: 3.2rem;
       color: #ffffff;
-      line-height: 1.15;
+      line-height: 1.2;
       margin-bottom: 1.5rem;
 
       span {
         color: var(--secondary);
-        font-style: italic;
       }
     }
 
     @media (max-width: 768px) {
       .hero-title {
-        font-size: 2.3rem;
+        font-size: 2.2rem;
       }
     }
 
     .hero-description {
-      font-size: 1.2rem;
+      font-size: 1.25rem;
       color: #cbd5e1;
       line-height: 1.7;
       margin-bottom: 2.5rem;
-      max-width: 700px;
+      max-width: 720px;
     }
 
     .hero-actions {
@@ -336,48 +381,6 @@ import { CommonModule } from '@angular/common';
       }
     }
 
-    .banner-strip {
-      background: var(--dark);
-      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-      padding: 1.75rem 0;
-
-      .strip-grid {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 2rem;
-      }
-
-      @media (max-width: 850px) {
-        .strip-grid {
-          grid-template-columns: 1fr;
-          gap: 1.2rem;
-        }
-      }
-
-      .strip-item {
-        display: flex;
-        align-items: center;
-        gap: 1.2rem;
-
-        i {
-          font-size: 2rem;
-          color: var(--secondary);
-        }
-
-        h4 {
-          color: #ffffff;
-          font-size: 1.05rem;
-          margin-bottom: 0.2rem;
-        }
-
-        p {
-          color: #94a3b8;
-          font-size: 0.88rem;
-          margin: 0;
-        }
-      }
-    }
-
     .about-grid {
       display: grid;
       grid-template-columns: 1fr 1.1fr;
@@ -414,7 +417,7 @@ import { CommonModule } from '@angular/common';
         border-radius: var(--radius-sm);
         border-left: 4px solid var(--secondary);
         box-shadow: var(--shadow-md);
-        max-width: 200px;
+        max-width: 220px;
 
         .exp-number {
           display: block;
@@ -445,13 +448,12 @@ import { CommonModule } from '@angular/common';
         margin: 2rem 0;
         display: flex;
         flex-direction: column;
-        gap: 1rem;
+        gap: 1.1rem;
 
         .feature-item {
           display: flex;
+          gap: 1rem;
           align-items: flex-start;
-          gap: 0.8rem;
-          font-size: 0.95rem;
 
           i {
             color: var(--secondary);
@@ -460,7 +462,7 @@ import { CommonModule } from '@angular/common';
           }
 
           strong {
-            color: var(--primary);
+            color: var(--dark);
           }
         }
       }
@@ -474,10 +476,9 @@ import { CommonModule } from '@angular/common';
         .founder-info {
           display: flex;
           align-items: center;
-          gap: 0.5rem;
-          font-style: italic;
-          color: var(--text-muted);
-          font-size: 0.92rem;
+          gap: 0.75rem;
+          color: var(--primary);
+          font-size: 0.95rem;
 
           .quote-icon {
             color: var(--secondary);
@@ -487,10 +488,6 @@ import { CommonModule } from '@angular/common';
       }
     }
 
-    .bg-light {
-      background-color: var(--bg-light);
-    }
-
     .services-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -498,7 +495,7 @@ import { CommonModule } from '@angular/common';
       margin-bottom: 3rem;
     }
 
-    @media (max-width: 950px) {
+    @media (max-width: 992px) {
       .services-grid {
         grid-template-columns: repeat(2, 1fr);
       }
@@ -515,76 +512,75 @@ import { CommonModule } from '@angular/common';
       padding: 2.5rem 2rem;
       border-radius: var(--radius-md);
       box-shadow: var(--shadow-sm);
-      border: 1px solid var(--border-color);
+      border: 1px solid #e2e8f0;
       transition: var(--transition);
       display: flex;
       flex-direction: column;
 
       &:hover {
         transform: translateY(-5px);
-        box-shadow: var(--shadow-md);
+        box-shadow: var(--shadow-lg);
         border-color: var(--secondary);
       }
 
       .card-icon {
-        width: 58px;
-        height: 58px;
+        width: 60px;
+        height: 60px;
+        border-radius: var(--radius-sm);
         background: var(--secondary-soft);
         color: var(--secondary);
         display: flex;
         align-items: center;
         justify-content: center;
-        font-size: 1.6rem;
-        border-radius: var(--radius-sm);
+        font-size: 1.5rem;
         margin-bottom: 1.5rem;
       }
 
       h3 {
-        font-size: 1.35rem;
-        margin-bottom: 0.85rem;
+        font-size: 1.3rem;
+        margin-bottom: 0.75rem;
+        color: var(--dark);
       }
 
       p {
+        color: var(--text-muted);
         font-size: 0.95rem;
+        line-height: 1.6;
         margin-bottom: 1.25rem;
-        flex-grow: 1;
       }
 
       .service-bullets {
         list-style: none;
-        margin-bottom: 1.5rem;
-        display: flex;
-        flex-direction: column;
-        gap: 0.5rem;
+        padding: 0;
+        margin: 0 0 1.5rem 0;
 
         li {
-          font-size: 0.88rem;
-          color: var(--text-main);
           display: flex;
           align-items: center;
-          gap: 0.5rem;
+          gap: 0.6rem;
+          font-size: 0.88rem;
+          color: var(--text-dark);
+          margin-bottom: 0.45rem;
 
           i {
             color: var(--secondary);
-            font-size: 0.75rem;
+            font-size: 0.8rem;
           }
         }
       }
 
       .card-link {
-        font-weight: 600;
-        color: var(--secondary);
+        margin-top: auto;
         display: inline-flex;
         align-items: center;
         gap: 0.5rem;
-        font-size: 0.92rem;
+        color: var(--secondary);
+        font-weight: 600;
+        font-size: 0.95rem;
 
-        i {
-          transition: transform 0.2s ease;
-        }
-
-        &:hover i {
-          transform: translateX(4px);
+        &:hover {
+          gap: 0.8rem;
+          color: var(--secondary-hover);
         }
       }
     }
@@ -594,75 +590,149 @@ import { CommonModule } from '@angular/common';
       margin-top: 1rem;
     }
 
-    .testimonials-grid {
+    .serve-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 2rem;
-      margin-bottom: 3rem;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.5rem;
     }
 
-    @media (max-width: 950px) {
-      .testimonials-grid {
+    @media (max-width: 992px) {
+      .serve-grid {
         grid-template-columns: repeat(2, 1fr);
       }
     }
 
-    @media (max-width: 650px) {
-      .testimonials-grid {
+    @media (max-width: 576px) {
+      .serve-grid {
         grid-template-columns: 1fr;
       }
     }
 
-    .testimonial-card {
+    .serve-card {
       background: #ffffff;
-      padding: 2.2rem;
+      padding: 2rem 1.5rem;
       border-radius: var(--radius-md);
-      box-shadow: var(--shadow-sm);
-      border: 1px solid var(--border-color);
-      display: flex;
-      flex-direction: column;
+      border: 1px solid #e2e8f0;
+      text-align: center;
+      transition: var(--transition);
 
-      .stars {
-        color: #f59e0b;
-        margin-bottom: 1rem;
-        font-size: 0.9rem;
+      &:hover {
+        border-color: var(--secondary);
+        box-shadow: var(--shadow-md);
+        transform: translateY(-4px);
       }
 
-      .quote {
-        font-size: 0.95rem;
-        font-style: italic;
-        line-height: 1.6;
-        margin-bottom: 1.5rem;
-        flex-grow: 1;
-      }
-
-      .client-meta {
+      .serve-icon {
+        width: 60px;
+        height: 60px;
+        margin: 0 auto 1.25rem auto;
+        background: var(--secondary-soft);
+        color: var(--secondary);
+        border-radius: 50%;
         display: flex;
         align-items: center;
-        gap: 1rem;
+        justify-content: center;
+        font-size: 1.4rem;
+      }
 
-        .client-avatar {
-          width: 44px;
-          height: 44px;
-          border-radius: 50%;
-          background: var(--secondary-soft);
-          color: var(--secondary);
+      h4 {
+        font-size: 1.1rem;
+        margin-bottom: 0.75rem;
+        color: var(--dark);
+      }
+
+      p {
+        font-size: 0.9rem;
+        color: var(--text-muted);
+        line-height: 1.5;
+        margin: 0;
+      }
+    }
+
+    .two-col-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3.5rem;
+    }
+
+    @media (max-width: 900px) {
+      .two-col-grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+      }
+    }
+
+    .compliance-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 1.5rem;
+      background: #ffffff;
+      border-radius: var(--radius-sm);
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+
+      th, td {
+        padding: 1.1rem 1.25rem;
+        text-align: left;
+        border-bottom: 1px solid #f1f5f9;
+      }
+
+      th {
+        background: var(--dark);
+        color: #ffffff;
+        font-size: 0.9rem;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+      }
+
+      td {
+        font-size: 0.92rem;
+        color: var(--text-dark);
+      }
+
+      .date-badge {
+        display: inline-block;
+        background: var(--secondary-soft);
+        color: var(--secondary);
+        font-weight: 700;
+        padding: 0.25rem 0.65rem;
+        border-radius: 4px;
+        font-size: 0.85rem;
+      }
+    }
+
+    .faq-list {
+      margin-top: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+
+      .faq-card {
+        background: #ffffff;
+        padding: 1.5rem;
+        border-radius: var(--radius-sm);
+        border-left: 4px solid var(--secondary);
+        box-shadow: var(--shadow-sm);
+
+        h4 {
+          font-size: 1.05rem;
+          color: var(--dark);
+          margin-bottom: 0.5rem;
           display: flex;
           align-items: center;
-          justify-content: center;
-          font-size: 1.2rem;
+          gap: 0.6rem;
+
+          i {
+            color: var(--secondary);
+            font-size: 1rem;
+          }
         }
 
-        .client-details {
-          h4 {
-            font-size: 1rem;
-            margin-bottom: 0.15rem;
-          }
-
-          span {
-            font-size: 0.8rem;
-            color: var(--text-muted);
-          }
+        p {
+          font-size: 0.92rem;
+          color: var(--text-muted);
+          line-height: 1.6;
+          margin: 0;
         }
       }
     }
@@ -726,61 +796,40 @@ import { CommonModule } from '@angular/common';
 export class HomeComponent {
   featuredServices = [
     {
-      title: 'Corporate & Commercial Law',
-      icon: 'fa-solid fa-briefcase',
-      description: 'End-to-end counsel for contracts, M&A structuring, shareholder agreements, and corporate restructuring.',
-      bullets: ['Contract drafting & negotiation', 'Joint ventures & M&A', 'Due diligence audits']
+      title: 'Accounting Services',
+      icon: 'fa-solid fa-book-bookmark',
+      description: 'Complete bookkeeping and financial reporting as per Indian GAAP.',
+      bullets: ['Monthly ledger maintenance', 'Bank reconciliation', 'Profit & Loss & Balance Sheet', 'MIS reports for business decisions']
     },
     {
-      title: 'Taxation & Regulatory Advisory',
+      title: 'Tax Filing Services - Our Core',
       icon: 'fa-solid fa-file-invoice-dollar',
-      description: 'Strategic direct and indirect tax advisory, dispute representation, and GST/FEMA compliance frameworks.',
-      bullets: ['Direct & Indirect Tax advisory', 'FEMA & cross-border tax', 'Appellate authority representation']
+      description: 'Full-suite ITR, GST, and TDS compliance with end-to-end notice handling.',
+      bullets: ['ITR for Salaried, Business, Professionals', 'GST Registration, GSTR-1 & 3B, GSTR-9', 'TDS/TCS returns (24Q, 26Q, 27Q)', 'Tax Planning: Old vs New regime analysis']
     },
     {
-      title: 'Dispute Resolution & Litigation',
-      icon: 'fa-solid fa-gavel',
-      description: 'Tenacious advocacy across High Courts, NCLT, DRT, and domestic/international commercial arbitrations.',
-      bullets: ['Commercial disputes & recovery', 'Insolvency & bankruptcy (IBC)', 'Arbitration & mediation']
+      title: 'Loan Services',
+      icon: 'fa-solid fa-landmark',
+      description: 'We help you get the best loan with minimal paperwork across 30+ banks and NBFCs.',
+      bullets: ['Home Loan, Business & MSME Loan', 'Mudra Loan & Personal Loan', 'Loan Against Property (LAP)', 'Overdraft & CC Facility']
     },
     {
-      title: 'Intellectual Property Protection',
-      icon: 'fa-solid fa-copyright',
-      description: 'Securing trademarks, patents, copyrights, and guarding enterprise assets against infringement.',
-      bullets: ['Trademark & patent filings', 'IP portfolio management', 'Infringement litigation']
+      title: 'Insurance Services',
+      icon: 'fa-solid fa-shield-halved',
+      description: 'IRDA-compliant advisory to protect what matters most with full claim assistance.',
+      bullets: ['Life & Term Insurance', 'Health Insurance', 'Motor Insurance', 'Business Insurance & Claim assistance']
     },
     {
-      title: 'Banking & Financial Regulations',
-      icon: 'fa-solid fa-building-columns',
-      description: 'Guidance on lending documentation, regulatory licensing, RBI compliances, and project financing.',
-      bullets: ['Fintech & NBFC licensing', 'Loan structuring & security', 'RBI regulatory audits']
+      title: 'Investment Services',
+      icon: 'fa-solid fa-chart-pie',
+      description: 'Goal-based investment planning to grow long-term wealth securely.',
+      bullets: ['Mutual Funds & SIP', 'Fixed Deposits & PPF', 'NPS & ELSS for tax saving', 'Retirement & Child education planning']
     },
     {
-      title: 'Real Estate & Property Law',
-      icon: 'fa-solid fa-city',
-      description: 'Clear title verifications, RERA registrations, joint development agreements, and land litigation.',
-      bullets: ['RERA advisory & compliance', 'Title clearance & search reports', 'Commercial leases & deeds']
-    }
-  ];
-
-  topTestimonials = [
-    {
-      quote: 'Reva & Associates guided our cross-border joint venture with extraordinary precision. Their turnaround time and deep regulatory insight saved us months of deliberation.',
-      name: 'Vikramaditya Shah',
-      role: 'Managing Director',
-      company: 'Zenith Logistics Ltd.'
-    },
-    {
-      quote: 'Their litigation team represented us in a high-stakes NCLT dispute and delivered a seamless outcome. Highly dependable, ethical, and strategic.',
-      name: 'Sunita Mehra',
-      role: 'Chief Financial Officer',
-      company: 'Apex Infra Projects'
-    },
-    {
-      quote: 'Handling intellectual property and trademark protection across four continents was made effortlessly smooth by Reva & Associates. An indispensable legal partner.',
-      name: 'Rohan Deshmukh',
-      role: 'Founder & CEO',
-      company: 'Krypton Technologies'
+      title: 'Portfolio Management',
+      icon: 'fa-solid fa-arrow-trend-up',
+      description: 'For HNI clients seeking structured asset allocation and post-tax return maximization.',
+      bullets: ['Equity portfolio tracking', 'Asset allocation & risk profiling', 'Quarterly rebalancing', 'Post-tax return optimization']
     }
   ];
 }

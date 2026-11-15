@@ -7,6 +7,7 @@ interface ServiceDetail {
   category: string;
   title: string;
   icon: string;
+  badge?: string;
   shortDesc: string;
   fullDesc: string;
   deliverables: string[];
@@ -20,9 +21,9 @@ interface ServiceDetail {
     <!-- PAGE HERO -->
     <div class="page-hero">
       <div class="container">
-        <span class="badge-tag">Areas of Expertise</span>
-        <h1>Comprehensive Legal &amp; Corporate Solutions</h1>
-        <p>Strategic, end-to-end guidance to protect your interests and drive corporate longevity.</p>
+        <span class="badge-tag">Our Core Offerings</span>
+        <h1>Comprehensive Financial &amp; Taxation Services</h1>
+        <p>Simplifying Accounting, Taxation, Loans, Insurance, Investments &amp; Portfolio Management for Individuals and Businesses across India.</p>
       </div>
     </div>
 
@@ -33,7 +34,7 @@ interface ServiceDetail {
           <button 
             [class.active]="selectedCategory() === 'ALL'" 
             (click)="setCategory('ALL')">
-            All Practice Areas ({{ allServices.length }})
+            All Services ({{ allServices.length }})
           </button>
           <button 
             *ngFor="let cat of categories" 
@@ -47,13 +48,16 @@ interface ServiceDetail {
           <div class="service-detail-card" *ngFor="let s of filteredServices()">
             <div class="card-head">
               <div class="icon-box"><i [class]="s.icon"></i></div>
-              <span class="category-pill">{{ s.category }}</span>
+              <div class="pills-wrap">
+                <span class="core-pill" *ngIf="s.badge">{{ s.badge }}</span>
+                <span class="category-pill">{{ s.category }}</span>
+              </div>
             </div>
             <h3>{{ s.title }}</h3>
             <p class="desc">{{ s.fullDesc }}</p>
             
             <div class="deliverables-block">
-              <h5>Key Deliverables &amp; Advisory Scope:</h5>
+              <h5>Key Offerings &amp; Scope:</h5>
               <ul>
                 <li *ngFor="let d of s.deliverables">
                   <i class="fa-solid fa-circle-check"></i>
@@ -63,8 +67,8 @@ interface ServiceDetail {
             </div>
 
             <div class="card-footer">
-              <a routerLink="/contact" class="btn btn-outline">
-                <span>Inquire About This Service</span>
+              <a routerLink="/contact" class="btn btn-primary">
+                <span>Book Free Consultation</span>
                 <i class="fa-solid fa-arrow-right"></i>
               </a>
             </div>
@@ -77,12 +81,15 @@ interface ServiceDetail {
     <section class="section bg-light">
       <div class="container text-center">
         <div class="need-help-box">
-          <i class="fa-solid fa-scale-balanced scale-icon"></i>
-          <h2>Need Custom Advisory or Bespoke Retainers?</h2>
+          <i class="fa-solid fa-phone-volume scale-icon"></i>
+          <h2>Have Questions About Taxes, Loans, or Investments?</h2>
           <p>
-            We structure specialized multi-practice retainers for startups, conglomerates, and family offices tailored to their ongoing transactional volume.
+            Connect with <strong>Pooja Patel</strong> at Reva Associates for free initial advice. We explain complex financial rules in simple language.
           </p>
-          <a routerLink="/contact" class="btn btn-primary">Schedule a Confidential Discussion</a>
+          <div class="btn-group">
+            <a routerLink="/contact" class="btn btn-primary">Book Free Consultation</a>
+            <a href="tel:8879146502" class="btn btn-outline"><i class="fa-solid fa-phone"></i> Call 8879 146 502</a>
+          </div>
         </div>
       </div>
     </section>
@@ -95,7 +102,7 @@ interface ServiceDetail {
       text-align: center;
 
       h1 {
-        font-size: 3rem;
+        font-size: 2.8rem;
         color: #ffffff;
         margin: 0.8rem 0;
       }
@@ -103,8 +110,9 @@ interface ServiceDetail {
       p {
         color: #cbd5e1;
         font-size: 1.15rem;
-        max-width: 650px;
+        max-width: 750px;
         margin: 0 auto;
+        line-height: 1.6;
       }
     }
 
@@ -185,6 +193,22 @@ interface ServiceDetail {
           font-size: 1.5rem;
         }
 
+        .pills-wrap {
+          display: flex;
+          gap: 0.5rem;
+          align-items: center;
+        }
+
+        .core-pill {
+          background: #fef3c7;
+          color: #b45309;
+          font-weight: 700;
+          font-size: 0.78rem;
+          padding: 0.3rem 0.75rem;
+          border-radius: 50px;
+          border: 1px solid #fde68a;
+        }
+
         .category-pill {
           background: var(--bg-light);
           padding: 0.3rem 0.85rem;
@@ -199,12 +223,14 @@ interface ServiceDetail {
       h3 {
         font-size: 1.45rem;
         margin-bottom: 1rem;
+        color: var(--dark);
       }
 
       .desc {
         font-size: 0.98rem;
         line-height: 1.65;
         margin-bottom: 1.5rem;
+        color: var(--text-muted);
       }
 
       .deliverables-block {
@@ -229,10 +255,12 @@ interface ServiceDetail {
           display: flex;
           flex-direction: column;
           gap: 0.6rem;
+          padding: 0;
+          margin: 0;
 
           li {
-            font-size: 0.88rem;
-            color: var(--text-main);
+            font-size: 0.9rem;
+            color: var(--text-dark);
             display: flex;
             align-items: flex-start;
             gap: 0.6rem;
@@ -274,6 +302,13 @@ interface ServiceDetail {
         font-size: 1.05rem;
         margin-bottom: 2rem;
       }
+
+      .btn-group {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        flex-wrap: wrap;
+      }
     }
   `]
 })
@@ -281,124 +316,102 @@ export class ServicesComponent {
   selectedCategory = signal<string>('ALL');
 
   categories = [
-    'Corporate & M&A',
-    'Tax & Compliance',
-    'Litigation & Arbitration',
-    'Intellectual Property',
-    'Real Estate'
+    'Accounting',
+    'Tax Filing',
+    'Loans',
+    'Insurance',
+    'Investments',
+    'Portfolio Management'
   ];
 
   allServices: ServiceDetail[] = [
     {
-      id: 'corporate-ma',
-      category: 'Corporate & M&A',
-      title: 'Mergers, Acquisitions & Corporate Structuring',
-      icon: 'fa-solid fa-handshake-simple',
-      shortDesc: 'Strategic M&A, cross-border deal structuring and joint ventures.',
-      fullDesc: 'Comprehensive advisory for corporate transactions, restructuring, shareholder agreements, seed/series venture funding, and regulatory clearances under the Companies Act and SEBI.',
+      id: 'accounting-services',
+      category: 'Accounting',
+      title: 'Accounting Services',
+      icon: 'fa-solid fa-book-bookmark',
+      shortDesc: 'Complete bookkeeping and financial reporting as per Indian GAAP.',
+      fullDesc: 'Complete bookkeeping and financial reporting as per Indian GAAP. Monthly ledger maintenance, Bank reconciliation, Profit & Loss, Balance Sheet, MIS reports for business decisions.',
       deliverables: [
-        'End-to-end legal due diligence reports',
-        'Share Purchase & Shareholders Agreements (SPA/SHA)',
-        'Cross-border investment structuring (FDI/ODI)',
-        'Representation before ROC, RD, and NCLT approvals'
+        'Complete bookkeeping as per Indian GAAP',
+        'Monthly ledger maintenance & journal entries',
+        'Bank reconciliation statements (BRS)',
+        'Profit & Loss statement and Balance Sheet preparation',
+        'Management Information System (MIS) reports for informed business decisions'
       ]
     },
     {
-      id: 'commercial-contracts',
-      category: 'Corporate & M&A',
-      title: 'Commercial Contracts & Governance Advisory',
-      icon: 'fa-solid fa-file-contract',
-      shortDesc: 'Ironclad agreements protecting enterprise revenue streams and vendor relations.',
-      fullDesc: 'Drafting, auditing, and negotiating domestic and international commercial agreements tailored to prevent ambiguities and mitigate counterparty liabilities.',
-      deliverables: [
-        'Vendor, Master Service Agreements (MSA) and SLAs',
-        'Technology licensing and SaaS contracts',
-        'Director fiduciary duty & board governance policies',
-        'Confidentiality & Non-Compete covenants'
-      ]
-    },
-    {
-      id: 'taxation-fema',
-      category: 'Tax & Compliance',
-      title: 'Direct & Indirect Tax Representation',
+      id: 'tax-filing-services',
+      category: 'Tax Filing',
+      badge: 'Our Core',
+      title: 'Tax Filing Services - Our Core',
       icon: 'fa-solid fa-file-invoice-dollar',
-      shortDesc: 'Holistic corporate taxation, transfer pricing, and dispute advocacy.',
-      fullDesc: 'Expert counsel on direct tax litigation, advance rulings, GST audits, transfer pricing documentation, and appellate advocacy before ITAT and High Courts.',
+      shortDesc: 'Comprehensive ITR, GST, TDS compliance and strategic tax planning.',
+      fullDesc: 'Full-spectrum Indian taxation advisory and filing services designed to keep individuals, businesses, and professionals 100% compliant and tax-efficient.',
       deliverables: [
-        'Corporate tax planning & restructuring analysis',
-        'Transfer pricing benchmark studies',
-        'GST assessments, notices & appellate representation',
-        'Advance rulings and cross-border withholding strategies'
+        'Income Tax Return (ITR): For Salaried, Business, Professionals (ITR-1 to ITR-7), Belated & Revised Returns',
+        'GST: Registration, Monthly/Quarterly GSTR-1, GSTR-3B filing, Annual Return GSTR-9, LUT, E-way Bill, GST Notice Handling',
+        'TDS/TCS: Calculation, Return filing (24Q, 26Q, 27Q), Form 16/16A, Lower deduction certificate',
+        'Tax Planning: Old vs New regime analysis, 80C, 80D, Capital Gains, Advance Tax planning'
       ]
     },
     {
-      id: 'fema-regulatory',
-      category: 'Tax & Compliance',
-      title: 'FEMA, Banking & Foreign Exchange Regulations',
-      icon: 'fa-solid fa-building-columns',
-      shortDesc: 'Inbound & outbound foreign exchange compliance and RBI approvals.',
-      fullDesc: 'Guiding global enterprises and Indian corporations through RBI compliances, ECB borrowing guidelines, FDI reporting (FC-GPR, FC-TRS), and compounding procedures.',
+      id: 'loan-services',
+      category: 'Loans',
+      title: 'Loan Services',
+      icon: 'fa-solid fa-landmark',
+      shortDesc: 'We help you get the best loan with minimal paperwork across 30+ banks and NBFCs.',
+      fullDesc: 'We help you get the best loan with minimal paperwork: Home Loan, Business Loan, MSME Loan, Mudra Loan, Personal Loan, Loan Against Property, Overdraft & CC Facility. We compare across 30+ banks and NBFCs.',
       deliverables: [
-        'RBI compounding applications & settlement',
-        'External Commercial Borrowing (ECB) structuring',
-        'FLA return reviews & overseas direct investment (ODI)',
-        'Liaison and Branch Office setups in India'
+        'Home Loan & Loan Against Property (LAP)',
+        'Business Loan & MSME Loan facilitation',
+        'Mudra Loan & Personal Loan advisory',
+        'Overdraft (OD) & Cash Credit (CC) facilities',
+        'Interest rate and tenure comparison across 30+ leading banks & NBFCs'
       ]
     },
     {
-      id: 'litigation-arbitration',
-      category: 'Litigation & Arbitration',
-      title: 'Commercial Litigation & Dispute Resolution',
-      icon: 'fa-solid fa-gavel',
-      shortDesc: 'Assertive advocacy across trial, appellate, and commercial benches.',
-      fullDesc: 'High-stakes courtroom advocacy spanning original civil suits, recovery proceedings, injunctions, and writ petitions across the High Courts and Supreme Court.',
-      deliverables: [
-        'Filing and contestation of commercial summary suits',
-        'Injunctions and urgent interim reliefs',
-        'Writ petitions challenging arbitrary administrative actions',
-        'Enforcement of foreign judgments and decrees'
-      ]
-    },
-    {
-      id: 'ibc-insolvency',
-      category: 'Litigation & Arbitration',
-      title: 'Insolvency & Bankruptcy (IBC) Practice',
-      icon: 'fa-solid fa-scale-unbalanced-flip',
-      shortDesc: 'Resolution process advisory for creditors, corporate debtors, and resolution applicants.',
-      fullDesc: 'Advising financial and operational creditors, as well as distressed entities, in CIRP processes, Section 7/9/10 petitions before NCLT benches nationwide.',
-      deliverables: [
-        'Section 7 & Section 9 petition filings and defense',
-        'Resolution Plan preparation & CoC representation',
-        'Liquidation and voluntary winding-up compliance',
-        'Advisory on avoidance and fraudulent transactions'
-      ]
-    },
-    {
-      id: 'intellectual-property',
-      category: 'Intellectual Property',
-      title: 'Intellectual Property Portfolio Protection',
+      id: 'insurance-services',
+      category: 'Insurance',
+      title: 'Insurance Services',
       icon: 'fa-solid fa-shield-halved',
-      shortDesc: 'Safeguarding patents, trademarks, brand identity, and proprietary assets.',
-      fullDesc: 'End-to-end IP prosecution, trademark opposition hearings, copyright filings, trade secret agreements, and aggressive antipiracy enforcement.',
+      shortDesc: 'Life, Health, Term, Motor & Business Insurance with claim assistance.',
+      fullDesc: 'Life, Health, Term, Motor & Business Insurance. IRDA-compliant advisory to protect what matters. Claim assistance included.',
       deliverables: [
-        'Comprehensive trademark clearance searches and filings',
-        'Opposition and rectification proceedings',
-        'Cease & desist notices and infringement litigation',
-        'IP assignment and licensing agreements'
+        'Life & Term Insurance for complete family financial protection',
+        'Health & Medical Insurance (Individual & Family Floater)',
+        'Motor Insurance (Two-wheeler, Car & Commercial Vehicle)',
+        'Business & Commercial Asset Insurance',
+        'IRDA-compliant advisory with dedicated claim assistance support'
       ]
     },
     {
-      id: 'real-estate-rera',
-      category: 'Real Estate',
-      title: 'Real Estate & Infrastructure Development',
-      icon: 'fa-solid fa-city',
-      shortDesc: 'Clear title searches, project registrations, and land acquisition legalities.',
-      fullDesc: 'Advising developers, institutional funds, and landowners on real estate acquisitions, joint developments, RERA project compliance, and title certifications.',
+      id: 'investment-services',
+      category: 'Investments',
+      title: 'Investment Services',
+      icon: 'fa-solid fa-chart-pie',
+      shortDesc: 'Goal-based investment planning: Mutual Funds, SIP, FD, PPF, NPS & ELSS.',
+      fullDesc: 'Goal-based investment planning: Mutual Funds, SIP, Fixed Deposits, PPF, NPS, ELSS for tax saving, Retirement & Child education planning.',
       deliverables: [
-        '30-year title verification and Search Reports',
-        'Joint Development Agreements (JDA) & power of attorneys',
-        'RERA dispute resolutions & project disclosures',
-        'Commercial lease agreements & asset leasing'
+        'Mutual Funds & Systematic Investment Plans (SIP)',
+        'Tax saving ELSS schemes under Section 80C',
+        'Fixed Deposits (FD), Public Provident Fund (PPF) & National Pension Scheme (NPS)',
+        'Retirement planning & wealth accumulation strategies',
+        'Child higher education & milestone planning'
+      ]
+    },
+    {
+      id: 'portfolio-management',
+      category: 'Portfolio Management',
+      title: 'Portfolio Management',
+      icon: 'fa-solid fa-arrow-trend-up',
+      shortDesc: 'For HNI clients: Equity portfolio tracking, Asset allocation & rebalancing.',
+      fullDesc: 'For HNI clients: Equity portfolio tracking, Asset allocation, Risk profiling, Quarterly rebalancing to maximize post-tax returns.',
+      deliverables: [
+        'Equity portfolio tracking & performance monitoring',
+        'Comprehensive asset allocation aligned with financial goals',
+        'In-depth risk profiling and volatility hedging',
+        'Quarterly portfolio rebalancing to maximize post-tax returns'
       ]
     }
   ];

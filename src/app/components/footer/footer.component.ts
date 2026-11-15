@@ -10,20 +10,19 @@ import { RouterLink } from '@angular/router';
       <div class="container footer-content">
         <div class="footer-col brand-col">
           <div class="footer-logo">
-            <span class="logo-mark"><i class="fa-solid fa-scale-balanced"></i></span>
+            <span class="logo-mark"><i class="fa-solid fa-chart-line"></i></span>
             <div>
-              <h3>REVA &amp; ASSOCIATES</h3>
-              <span class="tag">Advocates &amp; Corporate Advisors</span>
+              <h3>REVA ASSOCIATES</h3>
+              <span class="tag">Your Trusted Financial Partner</span>
             </div>
           </div>
           <p class="brand-desc">
-            Reva &amp; Associates is a premier legal and corporate advisory firm delivering strategic counsel, regulatory compliance, dispute resolution, and taxation solutions to enterprises and individuals.
+            Simplifying Accounting, Taxation, Loans &amp; Investments for Individuals and Businesses across India. Operated by Pooja Patel in Borivali East, Mumbai.
           </p>
           <div class="social-links">
-            <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
-            <a href="https://twitter.com" target="_blank" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
-            <a href="https://facebook.com" target="_blank" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-            <a href="https://instagram.com" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://wa.me/918879146502" target="_blank" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+            <a href="mailto:revaassociates22@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+            <a href="tel:8879146502" aria-label="Phone"><i class="fa-solid fa-phone"></i></a>
           </div>
         </div>
 
@@ -31,21 +30,21 @@ import { RouterLink } from '@angular/router';
           <h4 class="col-title">Quick Links</h4>
           <ul class="footer-links">
             <li><a routerLink="/"><i class="fa-solid fa-chevron-right"></i> Home</a></li>
-            <li><a routerLink="/about"><i class="fa-solid fa-chevron-right"></i> About Our Firm</a></li>
-            <li><a routerLink="/services"><i class="fa-solid fa-chevron-right"></i> Practice Areas</a></li>
-            <li><a routerLink="/testimonials"><i class="fa-solid fa-chevron-right"></i> Client Testimonials</a></li>
-            <li><a routerLink="/contact"><i class="fa-solid fa-chevron-right"></i> Contact &amp; Inquiry</a></li>
+            <li><a routerLink="/about"><i class="fa-solid fa-chevron-right"></i> About Us</a></li>
+            <li><a routerLink="/services"><i class="fa-solid fa-chevron-right"></i> Our Services</a></li>
+            <li><a routerLink="/contact"><i class="fa-solid fa-chevron-right"></i> Contact Us</a></li>
           </ul>
         </div>
 
         <div class="footer-col">
-          <h4 class="col-title">Practice Areas</h4>
+          <h4 class="col-title">Our Services</h4>
           <ul class="footer-links">
-            <li><a routerLink="/services"><i class="fa-solid fa-chevron-right"></i> Corporate &amp; Commercial Law</a></li>
-            <li><a routerLink="/services"><i class="fa-solid fa-chevron-right"></i> Taxation &amp; Regulatory Compliance</a></li>
-            <li><a routerLink="/services"><i class="fa-solid fa-chevron-right"></i> Litigation &amp; Dispute Resolution</a></li>
-            <li><a routerLink="/services"><i class="fa-solid fa-chevron-right"></i> Intellectual Property Rights</a></li>
-            <li><a routerLink="/services"><i class="fa-solid fa-chevron-right"></i> Real Estate &amp; Property Advisory</a></li>
+            <li><a routerLink="/services"><i class="fa-solid fa-chevron-right"></i> Accounting Services</a></li>
+            <li><a routerLink="/services"><i class="fa-solid fa-chevron-right"></i> Tax Filing Services (ITR, GST, TDS)</a></li>
+            <li><a routerLink="/services"><i class="fa-solid fa-chevron-right"></i> Loan Advisory (30+ Banks &amp; NBFCs)</a></li>
+            <li><a routerLink="/services"><i class="fa-solid fa-chevron-right"></i> Insurance Services</a></li>
+            <li><a routerLink="/services"><i class="fa-solid fa-chevron-right"></i> Investment Services &amp; SIP</a></li>
+            <li><a routerLink="/services"><i class="fa-solid fa-chevron-right"></i> Portfolio Management</a></li>
           </ul>
         </div>
 
@@ -54,22 +53,29 @@ import { RouterLink } from '@angular/router';
           <div class="contact-item">
             <i class="fa-solid fa-location-dot"></i>
             <div>
-              <strong>Head Office</strong>
-              <p>402, Prestige Tower, Bandra Kurla Complex, Mumbai, Maharashtra 400051, India</p>
+              <strong>Office Address</strong>
+              <p>15/Patrakar Sadan, Near Rationing Office, Rajendra Nagar, Borivali East, Mumbai - 400066</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <i class="fa-solid fa-user"></i>
+            <div>
+              <strong>Contact Person</strong>
+              <p>Pooja Patel</p>
             </div>
           </div>
           <div class="contact-item">
             <i class="fa-solid fa-phone"></i>
             <div>
-              <strong>Phone</strong>
-              <p>+91 (022) 2890-1234 / +91 98765 43210</p>
+              <strong>Phone / WhatsApp</strong>
+              <p><a href="tel:8879146502" style="color: inherit;">+91 8879 146 502</a></p>
             </div>
           </div>
           <div class="contact-item">
             <i class="fa-solid fa-envelope"></i>
             <div>
               <strong>Email</strong>
-              <p>info&#64;revaassociates.in</p>
+              <p><a href="mailto:revaassociates22@gmail.com" style="color: inherit;">revaassociates22&#64;gmail.com</a></p>
             </div>
           </div>
         </div>
@@ -77,13 +83,9 @@ import { RouterLink } from '@angular/router';
 
       <div class="footer-bottom">
         <div class="container bottom-inner">
-          <p>&copy; {{ currentYear }} Reva &amp; Associates. All Rights Reserved. Built with Angular.</p>
+          <p>&copy; 2026 Reva Associates, Mumbai. Operated by Pooja Patel. All Rights Reserved.</p>
           <div class="disclaimer-links">
-            <a href="#">Privacy Policy</a>
-            <span>•</span>
-            <a href="#">Terms of Use</a>
-            <span>•</span>
-            <a href="#">Legal Disclaimer</a>
+            <span>Disclaimer: We are financial consultants, not a bank or NBFC. Investments are subject to market risks.</span>
           </div>
         </div>
       </div>

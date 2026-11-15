@@ -11,14 +11,12 @@ import { CommonModule } from '@angular/common';
       <div class="topbar">
         <div class="container topbar-inner">
           <div class="topbar-contacts">
-            <span><i class="fa-solid fa-phone"></i> +91 98765 43210</span>
-            <span><i class="fa-solid fa-envelope"></i> contact&#64;revaassociates.in</span>
-            <span><i class="fa-solid fa-clock"></i> Mon - Sat: 9:30 AM - 6:30 PM</span>
+            <a href="tel:8879146502"><i class="fa-solid fa-phone"></i> +91 8879 146 502</a>
+            <a href="mailto:revaassociates22@gmail.com"><i class="fa-solid fa-envelope"></i> revaassociates22&#64;gmail.com</a>
+            <span><i class="fa-solid fa-clock"></i> Mon - Sat: 10:00 AM - 7:00 PM</span>
           </div>
           <div class="topbar-socials">
-            <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
-            <a href="https://twitter.com" target="_blank" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
-            <a href="https://facebook.com" target="_blank" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://wa.me/918879146502" target="_blank" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
           </div>
         </div>
       </div>
@@ -26,10 +24,10 @@ import { CommonModule } from '@angular/common';
       <nav class="navbar">
         <div class="container nav-container">
           <a routerLink="/" class="logo">
-            <span class="logo-mark"><i class="fa-solid fa-scale-balanced"></i></span>
+            <span class="logo-mark"><i class="fa-solid fa-chart-line"></i></span>
             <div class="logo-text">
-              <span class="logo-title">REVA &amp; ASSOCIATES</span>
-              <span class="logo-tagline">Advocates &amp; Corporate Advisors</span>
+              <span class="logo-title">REVA ASSOCIATES</span>
+              <span class="logo-tagline">Your Trusted Financial Partner</span>
             </div>
           </a>
 
@@ -41,10 +39,9 @@ import { CommonModule } from '@angular/common';
             <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" (click)="closeMenu()">Home</a>
             <a routerLink="/about" routerLinkActive="active" (click)="closeMenu()">About Us</a>
             <a routerLink="/services" routerLinkActive="active" (click)="closeMenu()">Services</a>
-            <a routerLink="/testimonials" routerLinkActive="active" (click)="closeMenu()">Testimonials</a>
             <a routerLink="/contact" routerLinkActive="active" (click)="closeMenu()">Contact</a>
             <a routerLink="/contact" class="btn btn-primary nav-cta" (click)="closeMenu()">
-              <span>Free Consultation</span>
+              <span>Book Free Consultation</span>
               <i class="fa-solid fa-arrow-right"></i>
             </a>
           </div>
