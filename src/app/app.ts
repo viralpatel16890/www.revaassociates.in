@@ -11,5 +11,5 @@ import { FooterComponent } from './components/footer/footer.component';
   styleUrl: './app.scss',
 })
 export class App {
-  title = 'Reva & Associates';
+  title = 'Reva Associates';
 }
