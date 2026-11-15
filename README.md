@@ -109,6 +109,49 @@ Yes, complete representation and reply drafting.
 
 ---
 
+## 🛠️ Tech Stack & Architecture
+
+- **Framework:** [Angular (v21)](https://angular.dev/) Standalone Components
+- **Language:** TypeScript 5.9
+- **Styling:** SCSS, Responsive Flex/Grid Layouts, FontAwesome 6 icons
+- **Testing:** [Vitest](https://vitest.dev/) with V8 coverage provider & JSDOM environment
+- **Hosting / Deploy:** [Vercel](https://vercel.com/) with SPA rewrites via `vercel.json`
+
+---
+
+## 🧪 Testing & Code Coverage
+
+The project achieves **100% test coverage** across all statements, branches, functions, and lines:
+
+```
+-------------------|---------|----------|---------|---------|-------------------
+File               | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
+-------------------|---------|----------|---------|---------|-------------------
+All files          |     100 |      100 |     100 |     100 |                   
+ app               |     100 |      100 |     100 |     100 |                   
+  app.config.ts    |     100 |      100 |     100 |     100 |                   
+  app.html         |     100 |      100 |     100 |     100 |                   
+  app.routes.ts    |     100 |      100 |     100 |     100 |                   
+  app.ts           |     100 |      100 |     100 |     100 |                   
+ ...ponents/footer |     100 |      100 |     100 |     100 |                   
+  footer.component |     100 |      100 |     100 |     100 |                   
+ ...ponents/navbar |     100 |      100 |     100 |     100 |                   
+  navbar.component |     100 |      100 |     100 |     100 |                   
+ app/pages/about   |     100 |      100 |     100 |     100 |                   
+  about.component  |     100 |      100 |     100 |     100 |                   
+ app/pages/contact |     100 |      100 |     100 |     100 |                   
+  contact.component|     100 |      100 |     100 |     100 |                   
+ app/pages/home    |     100 |      100 |     100 |     100 |                   
+  home.component   |     100 |      100 |     100 |     100 |                   
+ ...pages/services |     100 |      100 |     100 |     100 |                   
+  services.componen|     100 |      100 |     100 |     100 |                   
+ ...s/testimonials |     100 |      100 |     100 |     100 |                   
+  testimonials.comp|     100 |      100 |     100 |     100 |                   
+-------------------|---------|----------|---------|---------|-------------------
+```
+
+---
+
 ## 🚀 Getting Started Locally
 
 ### Prerequisites
@@ -117,6 +160,8 @@ Yes, complete representation and reply drafting.
 
 ### Installation
 ```bash
+git clone https://github.com/viralpatel16890/www.revaassociates.in.git
+cd www.revaassociates.in
 npm install
 ```
 
@@ -126,8 +171,20 @@ npm start
 # or
 npx ng serve
 ```
+Navigate to `http://localhost:4200/`.
+
+### Run Unit Tests
+```bash
+npm test
+```
+
+### Run Unit Tests with Coverage
+```bash
+npm run test:coverage
+```
 
 ### Production Build
 ```bash
 npm run build
 ```
+Production build artifacts will be stored in `dist/reva-associates/browser`.

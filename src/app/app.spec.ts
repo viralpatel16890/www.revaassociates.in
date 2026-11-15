@@ -16,9 +16,21 @@ describe('App', () => {
     expect(app).toBeTruthy();
   });
 
-  it('should have correct title property', () => {
+  it('should have correct title property and instantiate class directly', () => {
+    const appDirect = new App();
+    expect(appDirect.title).toBe('Reva Associates');
+
     const fixture = TestBed.createComponent(App);
     const app = fixture.componentInstance;
     expect(app.title).toBe('Reva Associates');
+  });
+
+  it('should render navbar, router-outlet, and footer in layout', () => {
+    const fixture = TestBed.createComponent(App);
+    fixture.detectChanges();
+    const compiled = fixture.nativeElement as HTMLElement;
+    expect(compiled.querySelector('app-navbar')).toBeTruthy();
+    expect(compiled.querySelector('router-outlet')).toBeTruthy();
+    expect(compiled.querySelector('app-footer')).toBeTruthy();
   });
 });
