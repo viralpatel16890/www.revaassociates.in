@@ -1,0 +1,92 @@
+<!-- PAGE HERO -->
+<div class="page-hero">
+  <div class="container">
+    <span class="badge-tag">Client Feedback</span>
+    <h1>Trusted by 50+ Clients Across Mumbai</h1>
+    <p>
+      Real experiences from salaried professionals, retail shopkeepers, and SME business owners.
+    </p>
+  </div>
+</div>
+
+<!-- STATS OVERVIEW -->
+<section class="section rating-summary">
+  <div class="container">
+    <div class="summary-card">
+      <div class="score-col">
+        <span class="big-score">50+</span>
+        <span class="rating-count">Happy Clients Across Mumbai</span>
+        <div class="stars">
+          @for (i of [1, 2, 3, 4, 5]; track i) {
+            <i icon="star"></i>
+          }
+        </div>
+        <span class="sub-label">100% Timely Compliance &amp; Satisfaction</span>
+      </div>
+
+      <div class="breakdown-col">
+        <div class="stat-bar-item">
+          <span>GST &amp; Income Tax Compliance</span>
+          <div class="progress-bar"><div class="progress-fill" style="width: 100%"></div></div>
+          <span>100%</span>
+        </div>
+        <div class="stat-bar-item">
+          <span>Loan &amp; Banking Assistance</span>
+          <div class="progress-bar"><div class="progress-fill" style="width: 98%"></div></div>
+          <span>30+ Banks</span>
+        </div>
+        <div class="stat-bar-item">
+          <span>Personalized Financial Planning</span>
+          <div class="progress-bar"><div class="progress-fill" style="width: 100%"></div></div>
+          <span>Customized</span>
+        </div>
+      </div>
+
+      <div class="cta-col">
+        <h4>Work With Us</h4>
+        <p>
+          Experience hassle-free tax filing, transparent accounting, and practical financial
+          guidance.
+        </p>
+        <a routerLink="/contact" class="btn btn-primary">Book Free Consultation</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS CARDS -->
+<section class="section pt-0">
+  <div class="container">
+    <div class="section-header">
+      <span class="badge-tag">Who We Serve</span>
+      <h2>Client Feedback from Mumbai</h2>
+      <p>Read what our clients have to say about working with Pooja Patel at Reva Associates.</p>
+    </div>
+
+    <div class="testimonials-wall">
+      @for (t of testimonials; track t) {
+        <div class="testimonial-bubble">
+          <div class="bubble-header">
+            <div class="stars">
+              @for (s of [1, 2, 3, 4, 5]; track s) {
+                <i icon="star"></i>
+              }
+            </div>
+            <span class="industry-badge">{{ t.category }}</span>
+          </div>
+          <h4 class="highlight">"{{ t.highlight }}"</h4>
+          <p class="body-text">{{ t.content }}</p>
+          <div class="author-block">
+            <div class="avatar-icon">
+              <i icon="user"></i>
+            </div>
+            <div class="author-details">
+              <strong>{{ t.author }}</strong>
+              <span>{{ t.location }}</span>
+            </div>
+          </div>
+        </div>
+      }
+    </div>
+  </div>
+</section>

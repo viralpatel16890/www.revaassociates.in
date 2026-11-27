@@ -4,7 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+    "build": "ng build && node scripts/postbuild.mjs",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "test:coverage": "ng test --coverage --watch=false"
@@ -17,10 +17,13 @@
     "@angular/core": "^21.2.0",
     "@angular/forms": "^21.2.0",
     "@angular/platform-browser": "^21.2.0",
+    "@angular/platform-server": "^21.2.0",
     "@angular/router": "^21.2.0",
+    "@angular/ssr": "^21.2.29",
+    "@fortawesome/free-brands-svg-icons": "^6.7.2",
+    "@fortawesome/free-solid-svg-icons": "^6.7.2",
     "rxjs": "~7.8.0",
-    "tslib": "^2.3.0",
-    "zone.js": "0.16.3"
+    "tslib": "^2.3.0"
   },
   "devDependencies": {
     "@angular/build": "^21.2.29",

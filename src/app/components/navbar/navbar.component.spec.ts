@@ -1,12 +1,16 @@
+import { Component } from '@angular/core';
 import { TestBed } from '@angular/core/testing';
 import { provideRouter } from '@angular/router';
 import { NavbarComponent } from './navbar.component';
+
+@Component({ template: '' })
+class StubPage {}
 
 describe('NavbarComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [NavbarComponent],
-      providers: [provideRouter([])]
+      providers: [provideRouter([{ path: '**', component: StubPage }])],
     }).compileComponents();
   });
 
@@ -55,7 +59,7 @@ describe('NavbarComponent', () => {
     expect(component.isScrolled()).toBe(false);
   });
 
-  it('should render brand logo, navigation links, and trigger close on click', () => {
+  it('should render brand logo, navigation links, and trigger close on click', async () => {
     const fixture = TestBed.createComponent(NavbarComponent);
     fixture.detectChanges();
     const component = fixture.componentInstance;
@@ -77,5 +81,7 @@ describe('NavbarComponent', () => {
       (link as HTMLAnchorElement).click();
       expect(component.menuOpen()).toBe(false);
     });
+    // Let the router finish the navigations the clicks started before teardown.
+    await fixture.whenStable();
   });
 });

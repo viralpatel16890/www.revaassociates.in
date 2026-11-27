@@ -1,0 +1,314 @@
+<!-- HERO SECTION -->
+<section class="hero">
+  <div class="hero-overlay"></div>
+  <div class="container hero-container">
+    <div class="hero-content">
+      <span class="hero-badge"
+        ><i icon="chart-line"></i> Accounting | Tax Filing | Loans | Insurance |
+        Investments | Portfolio Management</span
+      >
+      <h1 class="hero-title">
+        Reva Associates - <br />
+        <span>Your Trusted Financial Partner in Mumbai</span>
+      </h1>
+      <p class="hero-description">
+        Simplifying Accounting, Taxation, Loans &amp; Investments for Individuals and Businesses
+        across India.
+      </p>
+      <div class="hero-actions">
+        <a routerLink="/contact" class="btn btn-primary">
+          <span>Book Free Consultation</span>
+          <i icon="arrow-right"></i>
+        </a>
+        <a [href]="biz.phoneHref" class="btn btn-outline-white">
+          <i icon="phone"></i>
+          <span>Call Now</span>
+        </a>
+      </div>
+
+      <div class="hero-metrics">
+        <div class="metric-item">
+          <h3>50+</h3>
+          <p>Happy Clients</p>
+        </div>
+        <div class="metric-divider"></div>
+        <div class="metric-item">
+          <h3>30+</h3>
+          <p>Banks &amp; NBFC Partners</p>
+        </div>
+        <div class="metric-divider"></div>
+        <div class="metric-item">
+          <h3>100%</h3>
+          <p>Compliance &amp; Timely Filings</p>
+        </div>
+        <div class="metric-divider"></div>
+        <div class="metric-item">
+          <h3>1-Stop</h3>
+          <p>Financial Solution</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INTRO & WHY CHOOSE US -->
+<section class="section about-preview">
+  <div class="container about-grid">
+    <div class="about-image-col">
+      <div class="image-wrapper">
+        <img
+          ngSrc="photo-1554224155-8d04cb21cd6c"
+          width="800"
+          height="740"
+          sizes="(max-width: 900px) 100vw, 45vw"
+          alt="Accounting & Financial Planning"
+          class="main-img"
+        />
+        <div class="exp-badge">
+          <span class="exp-number">50+</span>
+          <span class="exp-text">Happy Clients Across Mumbai</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="about-text-col">
+      <span class="badge-tag">About Reva Associates</span>
+      <h2>We Handle the Numbers, So You Can Focus on Growth</h2>
+      <p class="lead-text">
+        At Reva Associates, we help individuals, startups, and SMEs stay compliant, save taxes, and
+        grow wealth.
+      </p>
+      <p>
+        Based in Borivali East, Mumbai, we combine deep knowledge of Indian taxation laws with
+        practical financial advice. From GST and Income Tax filing to loan advisory and investment
+        planning — we handle the numbers, so you can focus on growth.
+      </p>
+
+      <div class="features-list">
+        <div class="feature-item">
+          <i icon="circle-check"></i>
+          <div>
+            <strong>Local Expertise with 50+ Happy Clients:</strong> In-depth knowledge of Indian
+            accounting standards, Income Tax Act, and GST laws, trusted by 50+ clients across
+            Mumbai.
+          </div>
+        </div>
+        <div class="feature-item">
+          <i icon="circle-check"></i>
+          <div>
+            <strong>One-Stop Solution:</strong> From bookkeeping to portfolio management — all
+            financial services under one roof.
+          </div>
+        </div>
+        <div class="feature-item">
+          <i icon="circle-check"></i>
+          <div>
+            <strong>Transparent &amp; Timely:</strong> No hidden charges. We ensure 100% compliance
+            and on-time filings.
+          </div>
+        </div>
+        <div class="feature-item">
+          <i icon="circle-check"></i>
+          <div>
+            <strong>Personalized for You:</strong> Custom plans for salaried individuals, traders,
+            professionals, and SMEs.
+          </div>
+        </div>
+      </div>
+
+      <div class="cta-row">
+        <a routerLink="/about" class="btn btn-primary">More About Us</a>
+        <div class="founder-info">
+          <i icon="handshake" class="quote-icon"></i>
+          <span><strong>Our Promise:</strong> Compliance, Clarity, Growth.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- OUR SERVICES OVERVIEW -->
+<section class="section services-section bg-light">
+  <div class="container">
+    <div class="section-header">
+      <span class="badge-tag">Our Services</span>
+      <h2>Comprehensive Financial &amp; Taxation Solutions</h2>
+      <p>
+        End-to-end accounting, tax compliance, loan syndication, insurance, and wealth advisory
+        tailored to your unique goals.
+      </p>
+    </div>
+
+    <div class="services-grid">
+      @for (s of featuredServices; track s) {
+        <div class="service-card">
+          <div class="card-icon"><i [icon]="s.icon"></i></div>
+          <h3>{{ s.title }}</h3>
+          <p>{{ s.description }}</p>
+          <ul class="service-bullets">
+            @for (item of s.bullets; track item) {
+              <li><i icon="check"></i> {{ item }}</li>
+            }
+          </ul>
+          <a routerLink="/services" class="card-link">
+            <span>Explore Details</span>
+            <i icon="arrow-right"></i>
+          </a>
+        </div>
+      }
+    </div>
+
+    <div class="view-all-wrapper">
+      <a routerLink="/services" class="btn btn-primary">
+        <span>View All Services</span>
+        <i icon="arrow-right"></i>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- WHO WE SERVE -->
+<section class="section who-we-serve-section">
+  <div class="container">
+    <div class="section-header">
+      <span class="badge-tag">Who We Serve</span>
+      <h2>Tailored Solutions for Every Client</h2>
+      <p>
+        We serve a diverse range of clients across Mumbai and India with personalized financial
+        support.
+      </p>
+    </div>
+
+    <div class="serve-grid">
+      <div class="serve-card">
+        <div class="serve-icon"><i icon="user-tie"></i></div>
+        <h4>Salaried Professionals &amp; NRI Clients</h4>
+        <p>
+          Optimal tax filing, Old vs New regime optimization, Capital gains calculation, and foreign
+          remittance advisory.
+        </p>
+      </div>
+      <div class="serve-card">
+        <div class="serve-icon"><i icon="shop"></i></div>
+        <h4>Traders, Shopkeepers &amp; Retailers in Mumbai</h4>
+        <p>
+          Hassle-free monthly GST filings, input tax credit reconciliation, inventory bookkeeping,
+          and working capital loans.
+        </p>
+      </div>
+      <div class="serve-card">
+        <div class="serve-icon"><i icon="building"></i></div>
+        <h4>Startups, MSMEs, Partnership Firms, Pvt Ltd Companies</h4>
+        <p>
+          End-to-end statutory compliance, Indian GAAP bookkeeping, TDS/TCS, advance tax, and
+          balance sheet preparation.
+        </p>
+      </div>
+      <div class="serve-card">
+        <div class="serve-icon"><i icon="user-doctor"></i></div>
+        <h4>Doctors, CAs, Lawyers &amp; Freelancers</h4>
+        <p>
+          Presumptive taxation (Section 44ADA), professional expense optimization, investment
+          planning, and wealth management.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COMPLIANCE CALENDAR & FAQ -->
+<section class="section calendar-faq-section bg-light">
+  <div class="container">
+    <div class="two-col-grid">
+      <!-- COMPLIANCE CALENDAR -->
+      <div class="col-calendar">
+        <span class="badge-tag">Compliance Calendar</span>
+        <h2>Key Tax Deadlines</h2>
+        <p>Stay ahead of statutory due dates and avoid late fees and interest penalties.</p>
+
+        <div class="calendar-table-wrap">
+          <table class="compliance-table">
+            <thead>
+              <tr>
+                <th>Deadline</th>
+                <th>Compliance Requirement</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><span class="date-badge">July 31</span></td>
+                <td><strong>ITR Filing for Individuals</strong> (Salaried, Non-audit cases)</td>
+              </tr>
+              <tr>
+                <td><span class="date-badge">Oct 31</span></td>
+                <td><strong>Tax Audit Cases</strong> (Businesses &amp; eligible professionals)</td>
+              </tr>
+              <tr>
+                <td><span class="date-badge">Monthly</span></td>
+                <td><strong>GSTR-1 &amp; 3B</strong> (GST Returns &amp; Tax Payments)</td>
+              </tr>
+              <tr>
+                <td><span class="date-badge">Quarterly</span></td>
+                <td><strong>TDS Returns</strong> (24Q, 26Q, 27Q &amp; Form 16/16A generation)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- FAQ SECTION -->
+      <div class="col-faq">
+        <span class="badge-tag">Common Questions</span>
+        <h2>Frequently Asked Questions</h2>
+        <p>Quick answers to common queries regarding Indian taxation and regulatory compliance.</p>
+
+        <div class="faq-list">
+          <div class="faq-card">
+            <h4>
+              <i icon="circle-question"></i> What is the difference between old and new
+              tax regime?
+            </h4>
+            <p>
+              We explain and calculate which regime saves you more tax based on your deductions
+              (80C, 80D, HRA) and income brackets.
+            </p>
+          </div>
+          <div class="faq-card">
+            <h4>
+              <i icon="circle-question"></i> Do I need GST registration if turnover is
+              below 40 lakhs?
+            </h4>
+            <p>
+              Depends on service vs goods and interstate supply. We advise for free to ensure you
+              stay fully compliant.
+            </p>
+          </div>
+          <div class="faq-card">
+            <h4><i icon="circle-question"></i> Can you handle GST notices?</h4>
+            <p>
+              Yes, complete representation, scrutiny analysis, and reply drafting as per GST law
+              guidelines.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA BANNER -->
+<section class="cta-banner">
+  <div class="container cta-container">
+    <div class="cta-text">
+      <h2>Ready to Simplify Your Taxes &amp; Finances?</h2>
+      <p>Book a free consultation with Pooja Patel at Reva Associates today.</p>
+    </div>
+    <div class="cta-actions">
+      <a routerLink="/contact" class="btn btn-white">Book Free Consultation</a>
+      <a [href]="biz.phoneHref" class="call-link">
+        <i icon="phone-volume"></i>
+        <span>{{ biz.phoneDisplay }}</span>
+      </a>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,322 @@
+.page-hero {
+  background: linear-gradient(135deg, var(--dark) 0%, var(--primary) 100%);
+  color: #ffffff;
+  padding: 5rem 0 4.5rem 0;
+  text-align: center;
+
+  h1 {
+    font-size: 3rem;
+    color: #ffffff;
+    margin: 0.8rem 0;
+  }
+
+  p {
+    color: #cbd5e1;
+    font-size: 1.15rem;
+    max-width: 650px;
+    margin: 0 auto;
+  }
+}
+
+.contact-layout {
+  display: grid;
+  grid-template-columns: 1fr 1.25fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+@media (max-width: 950px) {
+  .contact-layout {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+}
+
+.info-column {
+  h2 {
+    font-size: 2.1rem;
+    margin: 0.8rem 0 1rem 0;
+    color: var(--dark);
+  }
+
+  p {
+    margin-bottom: 2rem;
+    font-size: 1.02rem;
+    color: var(--text-dark);
+  }
+
+  .info-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+
+    .info-card {
+      display: flex;
+      align-items: flex-start;
+      gap: 1.25rem;
+
+      .icon-circle {
+        width: 48px;
+        height: 48px;
+        min-width: 48px;
+        border-radius: var(--radius-sm);
+        background: var(--secondary-soft);
+        color: var(--secondary);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.2rem;
+      }
+
+      h4 {
+        font-size: 1rem;
+        margin-bottom: 0.25rem;
+        color: var(--dark);
+      }
+
+      p {
+        font-size: 0.92rem;
+        margin: 0;
+        line-height: 1.5;
+        color: var(--text-muted);
+      }
+
+      .contact-link {
+        color: var(--primary);
+        font-weight: 600;
+
+        &:hover {
+          color: var(--secondary);
+        }
+      }
+
+      .whatsapp-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.4rem;
+        color: #16a34a;
+        margin-top: 0.25rem;
+      }
+
+      .text-muted-small {
+        font-size: 0.82rem;
+        color: #94a3b8;
+      }
+    }
+  }
+
+  .direct-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 0.85rem;
+
+    .btn-whatsapp {
+      background-color: #25d366;
+      color: #ffffff;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.6rem;
+      padding: 0.85rem 1.5rem;
+      border-radius: var(--radius-sm);
+      font-weight: 700;
+
+      &:hover {
+        background-color: #20ba5a;
+      }
+    }
+
+    .btn-maps {
+      background-color: var(--primary);
+      color: #ffffff;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.6rem;
+      padding: 0.85rem 1.5rem;
+      border-radius: var(--radius-sm);
+      font-weight: 600;
+
+      &:hover {
+        background-color: var(--dark);
+      }
+    }
+  }
+}
+
+.form-wrapper {
+  background: #ffffff;
+  padding: 3rem;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--border-color);
+
+  h3 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+    color: var(--dark);
+  }
+
+  .form-sub {
+    font-size: 0.92rem;
+    margin-bottom: 2rem;
+    color: var(--text-muted);
+  }
+
+  .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.25rem;
+  }
+
+  @media (max-width: 600px) {
+    .form-row {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .form-group {
+    margin-bottom: 1.4rem;
+
+    label {
+      display: block;
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: var(--primary);
+      margin-bottom: 0.4rem;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 0.8rem 1rem;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--border-color);
+      font-family: var(--font-body);
+      font-size: 0.95rem;
+      color: var(--text-main);
+      outline: none;
+      transition: var(--transition);
+
+      &:focus {
+        border-color: var(--secondary);
+        box-shadow: 0 0 0 3px rgba(197, 160, 89, 0.15);
+      }
+    }
+  }
+
+  .submit-btn {
+    width: 100%;
+    padding: 0.95rem;
+    font-size: 1rem;
+
+    &:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+    }
+  }
+
+  .alert-success {
+    background: #f0fdf4;
+    border: 1px solid #bbf7d0;
+    padding: 2rem;
+    border-radius: var(--radius-sm);
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+
+    i {
+      font-size: 2.5rem;
+      color: #16a34a;
+    }
+
+    strong {
+      font-size: 1.2rem;
+      color: #166534;
+    }
+
+    p {
+      font-size: 0.95rem;
+      color: #15803d;
+      margin: 0.5rem 0 0 0;
+    }
+
+    .reset-btn {
+      align-self: flex-start;
+      margin-top: 0.5rem;
+    }
+  }
+}
+
+.map-section {
+  padding-bottom: 5rem;
+
+  .map-card {
+    background: var(--bg-light);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    padding: 2.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+
+    .map-info {
+      display: flex;
+      align-items: flex-start;
+      gap: 1.5rem;
+
+      i {
+        font-size: 2.5rem;
+        color: var(--secondary);
+        margin-top: 0.2rem;
+      }
+
+      h3 {
+        font-size: 1.35rem;
+        margin-bottom: 0.35rem;
+        color: var(--dark);
+      }
+
+      p {
+        font-size: 0.95rem;
+        color: var(--text-muted);
+        margin: 0;
+      }
+
+      .timing-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.4rem;
+        margin-top: 0.5rem;
+        font-size: 0.85rem;
+        font-weight: 600;
+        color: var(--primary);
+
+        i {
+          font-size: 0.9rem;
+          color: var(--secondary);
+        }
+      }
+    }
+  }
+}
+
+.map-embed {
+  margin-top: 1.5rem;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow-sm);
+  aspect-ratio: 16 / 7;
+  min-height: 320px;
+  background: var(--bg-light);
+
+  iframe {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: 0;
+  }
+}

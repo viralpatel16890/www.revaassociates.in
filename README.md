@@ -111,44 +111,45 @@ Yes, complete representation and reply drafting.
 
 ## 🛠️ Tech Stack & Architecture
 
-- **Framework:** [Angular (v21)](https://angular.dev/) Standalone Components
+- **Framework:** [Angular (v21)](https://angular.dev/) standalone components, zoneless change detection, lazy-loaded routes
+- **Rendering:** every page is **prerendered to static HTML** at build time (`outputMode: "static"`) and hydrated in the browser, so search engines and link previews see full content
 - **Language:** TypeScript 5.9
-- **Styling:** SCSS, Responsive Flex/Grid Layouts, FontAwesome 6 icons
+- **Styling:** SCSS, responsive Flex/Grid layouts, inline SVG icons (Font Awesome Free 6, tree-shaken; see `src/app/shared/icon`)
+- **SEO:** per-page title/description/Open Graph/canonical tags (`src/app/core/seo.service.ts`), `LocalBusiness` JSON-LD, `robots.txt`, `sitemap.xml`
+- **Analytics:** Google Analytics 4 (`src/app/core/analytics.service.ts`), see below
 - **Testing:** [Vitest](https://vitest.dev/) with V8 coverage provider & JSDOM environment
-- **Hosting / Deploy:** [Vercel](https://vercel.com/) with SPA rewrites via `vercel.json`
+- **Hosting / Deploy:** [Vercel](https://vercel.com/) static hosting; `vercel.json` sets security + cache headers, unknown URLs get the prerendered `404.html`
+
+### Where to change things
+
+| What | File |
+|---|---|
+| Phone, email, address, hours, maps link | `src/app/core/business-info.ts` |
+| Page titles & meta descriptions | `src/app/app.routes.ts` |
+| Google Analytics measurement ID | `src/app/core/analytics.config.ts` |
+| Sitemap (add new pages here too) | `public/sitemap.xml` |
+
+### Google Analytics 4
+
+Set `GA_MEASUREMENT_ID` in `src/app/core/analytics.config.ts` (GA → Admin → Data streams → Measurement ID, e.g. `G-XXXXXXXXXX`). When empty, nothing is loaded. It is also never loaded in `ng serve` (dev mode) or during prerendering. Tracked events:
+
+| Event | When |
+|---|---|
+| `page_view` | every route change |
+| `click_to_call`, `click_whatsapp`, `click_email`, `click_directions` | clicks on phone / WhatsApp / email / Google Maps links |
+| `generate_lead` | contact form submitted (only `service` and `client_type` are sent, never name, phone or email) |
+
+Mark `generate_lead`, `click_whatsapp` and `click_to_call` as **key events** in GA to see conversions.
 
 ---
 
 ## 🧪 Testing & Code Coverage
 
-The project achieves **100% test coverage** across all statements, branches, functions, and lines:
+```bash
+npm run test:coverage
+```
 
-```
--------------------|---------|----------|---------|---------|-------------------
-File               | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
--------------------|---------|----------|---------|---------|-------------------
-All files          |     100 |      100 |     100 |     100 |                   
- app               |     100 |      100 |     100 |     100 |                   
-  app.config.ts    |     100 |      100 |     100 |     100 |                   
-  app.html         |     100 |      100 |     100 |     100 |                   
-  app.routes.ts    |     100 |      100 |     100 |     100 |                   
-  app.ts           |     100 |      100 |     100 |     100 |                   
- ...ponents/footer |     100 |      100 |     100 |     100 |                   
-  footer.component |     100 |      100 |     100 |     100 |                   
- ...ponents/navbar |     100 |      100 |     100 |     100 |                   
-  navbar.component |     100 |      100 |     100 |     100 |                   
- app/pages/about   |     100 |      100 |     100 |     100 |                   
-  about.component  |     100 |      100 |     100 |     100 |                   
- app/pages/contact |     100 |      100 |     100 |     100 |                   
-  contact.component|     100 |      100 |     100 |     100 |                   
- app/pages/home    |     100 |      100 |     100 |     100 |                   
-  home.component   |     100 |      100 |     100 |     100 |                   
- ...pages/services |     100 |      100 |     100 |     100 |                   
-  services.componen|     100 |      100 |     100 |     100 |                   
- ...s/testimonials |     100 |      100 |     100 |     100 |                   
-  testimonials.comp|     100 |      100 |     100 |     100 |                   
--------------------|---------|----------|---------|---------|-------------------
-```
+47 tests across components, routes, SEO and analytics; coverage is ~99.8% of statements and 100% of functions.
 
 ---
 
@@ -187,4 +188,4 @@ npm run test:coverage
 ```bash
 npm run build
 ```
-Production build artifacts will be stored in `dist/reva-associates/browser`.
+Production build artifacts (prerendered HTML per page plus `404.html`) are stored in `dist/reva-associates/browser`. To preview the production build locally: `npx serve dist/reva-associates/browser`.
