@@ -2,12 +2,13 @@ import { TestBed } from '@angular/core/testing';
 import { provideRouter } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { ContactComponent } from './contact.component';
+import { AnalyticsService } from '../../core/analytics.service';
 
 describe('ContactComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [ContactComponent, FormsModule],
-      providers: [provideRouter([])]
+      providers: [provideRouter([])],
     }).compileComponents();
   });
 
@@ -44,7 +45,9 @@ describe('ContactComponent', () => {
 
     expect(component.submitted()).toBe(true);
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.alert-success')?.textContent).toContain('Thank you, Ramesh Shah!');
+    expect(compiled.querySelector('.alert-success')?.textContent).toContain(
+      'Thank you, Ramesh Shah!',
+    );
 
     const resetBtn = compiled.querySelector('.reset-btn') as HTMLButtonElement;
     expect(resetBtn).toBeTruthy();
@@ -64,7 +67,9 @@ describe('ContactComponent', () => {
     const phoneInput = fixture.nativeElement.querySelector('#phone') as HTMLInputElement;
     const emailInput = fixture.nativeElement.querySelector('#email') as HTMLInputElement;
     const clientSelect = fixture.nativeElement.querySelector('#clientType') as HTMLSelectElement;
-    const serviceSelect = fixture.nativeElement.querySelector('#serviceInterest') as HTMLSelectElement;
+    const serviceSelect = fixture.nativeElement.querySelector(
+      '#serviceInterest',
+    ) as HTMLSelectElement;
     const msgInput = fixture.nativeElement.querySelector('#message') as HTMLTextAreaElement;
     const form = fixture.nativeElement.querySelector('form') as HTMLFormElement;
 
@@ -106,5 +111,33 @@ describe('ContactComponent', () => {
     form.dispatchEvent(new Event('submit'));
     fixture.detectChanges();
     expect(fixture.componentInstance.submitted()).toBe(true);
+  });
+
+  it('should send a generate_lead event without personal details on submit', () => {
+    const trackEvent = vi.spyOn(TestBed.inject(AnalyticsService), 'trackEvent');
+    const component = TestBed.createComponent(ContactComponent).componentInstance;
+    Object.assign(component.formData, {
+      fullName: 'Ramesh Shah',
+      phone: '9876543210',
+      email: 'ramesh@example.com',
+      clientType: 'Other',
+      serviceInterest: 'Loan Services',
+      message: 'hi',
+    });
+    component.onSubmit();
+    expect(trackEvent).toHaveBeenCalledWith('generate_lead', {
+      service: 'Loan Services',
+      client_type: 'Other',
+    });
+  });
+
+  it('should embed the office location map lazily', () => {
+    const fixture = TestBed.createComponent(ContactComponent);
+    fixture.detectChanges();
+    const iframe = fixture.nativeElement.querySelector('.map-embed iframe') as HTMLIFrameElement;
+    expect(iframe.getAttribute('loading')).toBe('lazy');
+    expect(iframe.title).toContain('Reva Associates');
+    expect(iframe.src).toContain('https://www.google.com/maps?q=');
+    expect(iframe.src).toContain('output=embed');
   });
 });

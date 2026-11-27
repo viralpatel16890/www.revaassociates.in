@@ -1,0 +1,269 @@
+<!-- PAGE HERO -->
+<div class="page-hero">
+  <div class="container">
+    <span class="badge-tag">Get in Touch</span>
+    <h1>Contact Reva Associates</h1>
+    <p>
+      Book a free consultation or connect directly with Pooja Patel for personalized financial &amp;
+      taxation advice.
+    </p>
+  </div>
+</div>
+
+<section class="section">
+  <div class="container contact-layout">
+    <!-- CONTACT INFO COLUMN -->
+    <div class="info-column">
+      <span class="badge-tag">Reach Us Directly</span>
+      <h2>Your Trusted Financial Partner in Mumbai</h2>
+      <p>
+        Simplifying Accounting, Taxation, Loans &amp; Investments for Individuals and Businesses
+        across India.
+      </p>
+
+      <div class="info-cards">
+        <div class="info-card">
+          <div class="icon-circle"><i icon="location-dot"></i></div>
+          <div>
+            <h4>Office Address</h4>
+            <p><strong>Reva Associates</strong></p>
+            <p>
+              {{ biz.address.full }}
+            </p>
+          </div>
+        </div>
+
+        <div class="info-card">
+          <div class="icon-circle"><i icon="user-tie"></i></div>
+          <div>
+            <h4>Contact Person</h4>
+            <p><strong>Pooja Patel</strong> (Founder &amp; Financial Consultant)</p>
+          </div>
+        </div>
+
+        <div class="info-card">
+          <div class="icon-circle"><i icon="phone"></i></div>
+          <div>
+            <h4>Phone / WhatsApp</h4>
+            <p>
+              <a [href]="biz.phoneHref" class="contact-link"><strong>{{ biz.phoneDisplay }}</strong></a>
+            </p>
+            <p>
+              <a
+                [href]="biz.whatsappUrl"
+                target="_blank" rel="noopener noreferrer"
+                class="contact-link whatsapp-link"
+                ><i icon="whatsapp"></i> Chat on WhatsApp</a
+              >
+            </p>
+          </div>
+        </div>
+
+        <div class="info-card">
+          <div class="icon-circle"><i icon="envelope"></i></div>
+          <div>
+            <h4>Email Address</h4>
+            <p>
+              <a [href]="biz.emailHref" class="contact-link"
+                >{{ biz.email }}</a
+              >
+            </p>
+          </div>
+        </div>
+
+        <div class="info-card">
+          <div class="icon-circle"><i icon="clock"></i></div>
+          <div>
+            <h4>Office Timings</h4>
+            <p>{{ biz.hours.display }}</p>
+            <p class="text-muted-small">{{ biz.hours.closed }}</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="direct-actions">
+        <a [href]="biz.whatsappUrl" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp">
+          <i icon="whatsapp"></i>
+          <span>WhatsApp Us</span>
+        </a>
+        <a
+          [href]="biz.mapsUrl"
+          target="_blank" rel="noopener noreferrer"
+          class="btn btn-maps"
+        >
+          <i icon="map-location-dot"></i>
+          <span>Get Directions on Google Maps</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- FORM COLUMN -->
+    <div class="form-column">
+      <div class="form-wrapper">
+        <h3>Book Free Consultation</h3>
+        <p class="form-sub">
+          Leave your details below and Pooja Patel will connect with you shortly.
+        </p>
+
+        @if (submitted()) {
+          <div class="alert-success">
+            <i icon="circle-check"></i>
+            <div>
+              <strong>Thank you, {{ formData.fullName }}!</strong>
+              <p>
+                Your request regarding <em>"{{ formData.serviceInterest }}"</em> has been received.
+                We will contact you at {{ formData.phone }} or {{ formData.email }} during business
+                hours.
+              </p>
+            </div>
+            <button class="btn btn-outline reset-btn" (click)="resetForm()">
+              Send Another Inquiry
+            </button>
+          </div>
+        } @else {
+          <form (ngSubmit)="onSubmit()" #contactForm="ngForm">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="fullName">Full Name *</label>
+                <input
+                  type="text"
+                  id="fullName"
+                  name="fullName"
+                  [(ngModel)]="formData.fullName"
+                  required
+                  placeholder="e.g. Ramesh Shah"
+                />
+              </div>
+              <div class="form-group">
+                <label for="phone">Mobile / WhatsApp Number *</label>
+                <input
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  [(ngModel)]="formData.phone"
+                  required
+                  placeholder="e.g. 98765 43210"
+                />
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="email">Email Address *</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  [(ngModel)]="formData.email"
+                  required
+                  placeholder="e.g. name@example.com"
+                />
+              </div>
+              <div class="form-group">
+                <label for="clientType">I Am A *</label>
+                <select
+                  id="clientType"
+                  name="clientType"
+                  [(ngModel)]="formData.clientType"
+                  required
+                >
+                  <option value="" disabled selected>Select category</option>
+                  <option value="Salaried Professional / NRI">Salaried Professional / NRI</option>
+                  <option value="Trader / Shopkeeper / Retailer">
+                    Trader / Shopkeeper / Retailer
+                  </option>
+                  <option value="Startup / MSME / Pvt Ltd">Startup / MSME / Pvt Ltd</option>
+                  <option value="Doctor / CA / Lawyer / Freelancer">
+                    Doctor / CA / Lawyer / Freelancer
+                  </option>
+                  <option value="Other">Other</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="serviceInterest">Service Required *</label>
+              <select
+                id="serviceInterest"
+                name="serviceInterest"
+                [(ngModel)]="formData.serviceInterest"
+                required
+              >
+                <option value="" disabled selected>Select service</option>
+                <option value="Accounting Services">Accounting &amp; Bookkeeping</option>
+                <option value="Tax Filing Services">
+                  Tax Filing (ITR, GST, TDS, Notice Handling)
+                </option>
+                <option value="Loan Services">
+                  Loan Advisory (Home, Business, MSME, LAP, CC/OD)
+                </option>
+                <option value="Insurance Services">
+                  Insurance (Life, Health, Motor, Business)
+                </option>
+                <option value="Investment Services">
+                  Investment Planning (Mutual Funds, SIP, PPF, NPS)
+                </option>
+                <option value="Portfolio Management">Portfolio Management (HNI Wealth)</option>
+                <option value="Other Financial Inquiry">General Financial Consultation</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="message">Your Query / Message *</label>
+              <textarea
+                id="message"
+                name="message"
+                rows="4"
+                [(ngModel)]="formData.message"
+                required
+                placeholder="Tell us briefly about your accounting, taxation, or financial query..."
+              ></textarea>
+            </div>
+            <button
+              type="submit"
+              class="btn btn-primary submit-btn"
+              [disabled]="!contactForm.form.valid"
+            >
+              <i icon="paper-plane"></i>
+              <span>Submit Free Consultation Request</span>
+            </button>
+          </form>
+        }
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GOOGLE MAPS SECTION -->
+<section class="map-section">
+  <div class="container">
+    <div class="map-card">
+      <div class="map-info">
+        <i icon="map-pin"></i>
+        <div>
+          <h3>Visit Us in Borivali East</h3>
+          <p>
+            {{ biz.address.full }}
+          </p>
+          <p class="timing-badge"><i icon="clock"></i> {{ biz.hours.short }}</p>
+        </div>
+      </div>
+      <div class="map-actions">
+        <a
+          [href]="biz.mapsUrl"
+          target="_blank" rel="noopener noreferrer"
+          class="btn btn-outline"
+        >
+          <i icon="location-arrow"></i>
+          <span>Get Directions</span>
+        </a>
+      </div>
+    </div>
+    <div class="map-embed">
+      <iframe
+        [src]="mapEmbedUrl"
+        title="Map showing Reva Associates office in Borivali East, Mumbai"
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        allowfullscreen
+      ></iframe>
+    </div>
+  </div>
+</section>

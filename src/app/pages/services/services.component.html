@@ -1,0 +1,82 @@
+<!-- PAGE HERO -->
+<div class="page-hero">
+  <div class="container">
+    <span class="badge-tag">Our Core Offerings</span>
+    <h1>Comprehensive Financial &amp; Taxation Services</h1>
+    <p>
+      Simplifying Accounting, Taxation, Loans, Insurance, Investments &amp; Portfolio Management for
+      Individuals and Businesses across India.
+    </p>
+  </div>
+</div>
+
+<!-- FILTER BAR -->
+<section class="section">
+  <div class="container">
+    <div class="category-tabs">
+      <button [class.active]="selectedCategory() === 'ALL'" (click)="setCategory('ALL')">
+        All Services ({{ allServices.length }})
+      </button>
+      @for (cat of categories; track cat) {
+        <button [class.active]="selectedCategory() === cat" (click)="setCategory(cat)">
+          {{ cat }}
+        </button>
+      }
+    </div>
+
+    <div class="services-list-grid">
+      @for (s of filteredServices(); track s) {
+        <div class="service-detail-card">
+          <div class="card-head">
+            <div class="icon-box"><i [icon]="s.icon"></i></div>
+            <div class="pills-wrap">
+              @if (s.badge) {
+                <span class="core-pill">{{ s.badge }}</span>
+              }
+              <span class="category-pill">{{ s.category }}</span>
+            </div>
+          </div>
+          <h3>{{ s.title }}</h3>
+          <p class="desc">{{ s.fullDesc }}</p>
+          <div class="deliverables-block">
+            <h5>Key Offerings &amp; Scope:</h5>
+            <ul>
+              @for (d of s.deliverables; track d) {
+                <li>
+                  <i icon="circle-check"></i>
+                  <span>{{ d }}</span>
+                </li>
+              }
+            </ul>
+          </div>
+          <div class="card-footer">
+            <a routerLink="/contact" class="btn btn-primary">
+              <span>Book Free Consultation</span>
+              <i icon="arrow-right"></i>
+            </a>
+          </div>
+        </div>
+      }
+    </div>
+  </div>
+</section>
+
+<!-- CONSULTATION CALLOUT -->
+<section class="section bg-light">
+  <div class="container text-center">
+    <div class="need-help-box">
+      <i icon="phone-volume" class="scale-icon"></i>
+      <h2>Have Questions About Taxes, Loans, or Investments?</h2>
+      <p>
+        Connect with <strong>Pooja Patel</strong> at Reva Associates for free initial advice. We
+        explain complex financial rules in simple language.
+      </p>
+      <div class="btn-group">
+        <a routerLink="/contact" class="btn btn-primary">Book Free Consultation</a>
+        <a [href]="biz.phoneHref" class="btn btn-outline"
+          ><i icon="phone"></i> Call {{ biz.phoneDisplay }}</a
+        >
+      </div>
+    </div>
+  </div>
+</section>

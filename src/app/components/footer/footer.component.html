@@ -1,0 +1,85 @@
+<footer class="footer">
+  <div class="container footer-content">
+    <div class="footer-col brand-col">
+      <div class="footer-logo">
+        <span class="logo-mark"><i icon="chart-line"></i></span>
+        <div>
+          <h3>REVA ASSOCIATES</h3>
+          <span class="tag">Your Trusted Financial Partner</span>
+        </div>
+      </div>
+      <p class="brand-desc">
+        Simplifying Accounting, Taxation, Loans &amp; Investments for Individuals and Businesses across India. Operated by Pooja Patel in Borivali East, Mumbai.
+      </p>
+      <div class="social-links">
+        <a [href]="biz.whatsappUrl" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i icon="whatsapp"></i></a>
+        <a [href]="biz.emailHref" aria-label="Email"><i icon="envelope"></i></a>
+        <a [href]="biz.phoneHref" aria-label="Phone"><i icon="phone"></i></a>
+      </div>
+    </div>
+
+    <div class="footer-col">
+      <h4 class="col-title">Quick Links</h4>
+      <ul class="footer-links">
+        <li><a routerLink="/"><i icon="chevron-right"></i> Home</a></li>
+        <li><a routerLink="/about"><i icon="chevron-right"></i> About Us</a></li>
+        <li><a routerLink="/services"><i icon="chevron-right"></i> Our Services</a></li>
+        <li><a routerLink="/testimonials"><i icon="chevron-right"></i> Client Feedback</a></li>
+        <li><a routerLink="/contact"><i icon="chevron-right"></i> Contact Us</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4 class="col-title">Our Services</h4>
+      <ul class="footer-links">
+        <li><a routerLink="/services"><i icon="chevron-right"></i> Accounting Services</a></li>
+        <li><a routerLink="/services"><i icon="chevron-right"></i> Tax Filing Services (ITR, GST, TDS)</a></li>
+        <li><a routerLink="/services"><i icon="chevron-right"></i> Loan Advisory (30+ Banks &amp; NBFCs)</a></li>
+        <li><a routerLink="/services"><i icon="chevron-right"></i> Insurance Services</a></li>
+        <li><a routerLink="/services"><i icon="chevron-right"></i> Investment Services &amp; SIP</a></li>
+        <li><a routerLink="/services"><i icon="chevron-right"></i> Portfolio Management</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4 class="col-title">Contact Information</h4>
+      <div class="contact-item">
+        <i icon="location-dot"></i>
+        <div>
+          <strong>Office Address</strong>
+          <p>{{ biz.address.full }}</p>
+        </div>
+      </div>
+      <div class="contact-item">
+        <i icon="user"></i>
+        <div>
+          <strong>Contact Person</strong>
+          <p>Pooja Patel</p>
+        </div>
+      </div>
+      <div class="contact-item">
+        <i icon="phone"></i>
+        <div>
+          <strong>Phone / WhatsApp</strong>
+          <p><a [href]="biz.phoneHref" class="inherit-color">{{ biz.phoneDisplayIntl }}</a></p>
+        </div>
+      </div>
+      <div class="contact-item">
+        <i icon="envelope"></i>
+        <div>
+          <strong>Email</strong>
+          <p><a [href]="biz.emailHref" class="inherit-color">{{ biz.email }}</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <div class="container bottom-inner">
+      <p>&copy; {{ currentYear }} Reva Associates, Mumbai. Operated by Pooja Patel. All Rights Reserved.</p>
+      <div class="disclaimer-links">
+        <span>Disclaimer: We are financial consultants, not a bank or NBFC. Investments are subject to market risks.</span>
+      </div>
+    </div>
+  </div>
+</footer>
